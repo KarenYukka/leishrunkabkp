@@ -1,0 +1,1695 @@
+{
+  "associatedLayout": "Klondike",
+  "name": "HandleUserInput",
+  "events": [
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "name": "User Input",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Stock",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "A new card is revealed in 2 cases\n- the stock is clicked\n- the deck is empty because the card was dragged elsewhere\n\nDeck and Stock must be picked back because the 1st condition can exclude Stock and the 2nd one can exclude Deck."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::And"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "MouseButtonReleased"
+                          },
+                          "parameters": [
+                            "",
+                            "Left"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "CollisionPoint"
+                          },
+                          "parameters": [
+                            "Stock",
+                            "MouseX(\"\", 0)",
+                            "MouseY(\"\", 0)"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ObjectStack::ObjectStack::IsEmpty"
+                      },
+                      "parameters": [
+                        "Deck",
+                        "ObjectStack",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AjoutObjConcern"
+                  },
+                  "parameters": [
+                    "",
+                    "Deck"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AjoutObjConcern"
+                  },
+                  "parameters": [
+                    "",
+                    "Stock"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "ObjectStack::ObjectStack::IsEmpty"
+                      },
+                      "parameters": [
+                        "Stock",
+                        "ObjectStack",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Roll the discard back into the stock.\nCards in the discard are in the opposite order as in the stock.\nThey are picked from the top of the discard to the top of the stock.\nThis operation opposes the order, so they are back in the right order."
+                    },
+                    {
+                      "infiniteLoopWarning": true,
+                      "type": "BuiltinCommonInstructions::While",
+                      "whileConditions": [
+                        {
+                          "type": {
+                            "value": "ObjectStack::HasOnTop"
+                          },
+                          "parameters": [
+                            "",
+                            "Discard",
+                            "ObjectStack",
+                            "Card",
+                            ""
+                          ]
+                        }
+                      ],
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ObjectStack::ObjectStack::Remove"
+                          },
+                          "parameters": [
+                            "Discard",
+                            "ObjectStack",
+                            "Card",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ObjectStack::ObjectStack::AddOnTop"
+                          },
+                          "parameters": [
+                            "Stock",
+                            "ObjectStack",
+                            "Card",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Remove the previous card from the deck if it hasn't been used."
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "ObjectStack::Contains"
+                      },
+                      "parameters": [
+                        "",
+                        "Deck",
+                        "ObjectStack",
+                        "Card",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ObjectStack::ObjectStack::Remove"
+                      },
+                      "parameters": [
+                        "Deck",
+                        "ObjectStack",
+                        "Card",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ObjectStack::ObjectStack::AddOnTop"
+                      },
+                      "parameters": [
+                        "Discard",
+                        "ObjectStack",
+                        "Card",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Cache"
+                      },
+                      "parameters": [
+                        "Card"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "Card",
+                        "Draggable",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "MettreXY"
+                      },
+                      "parameters": [
+                        "Card",
+                        "=",
+                        "0",
+                        "=",
+                        "-200"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Pick a card."
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "ObjectStack::HasOnTop"
+                      },
+                      "parameters": [
+                        "",
+                        "Stock",
+                        "ObjectStack",
+                        "Card",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ObjectStack::ObjectStack::Remove"
+                      },
+                      "parameters": [
+                        "Stock",
+                        "ObjectStack",
+                        "Card",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ObjectStack::ObjectStack::AddOnTop"
+                      },
+                      "parameters": [
+                        "Deck",
+                        "ObjectStack",
+                        "Card",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Montre"
+                      },
+                      "parameters": [
+                        "Card",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "Card",
+                        "Draggable",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "MettreXY"
+                      },
+                      "parameters": [
+                        "Card",
+                        "=",
+                        "Deck.X()",
+                        "=",
+                        "Deck.Y()"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "No more card to pick"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "ObjectStack::ObjectStack::IsEmpty"
+                      },
+                      "parameters": [
+                        "Stock",
+                        "ObjectStack",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ObjectStack::ObjectStack::IsEmpty"
+                      },
+                      "parameters": [
+                        "Discard",
+                        "ObjectStack",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "Stock",
+                        "Animation",
+                        "=",
+                        "\"Empty\""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Dragging",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "MouseButtonPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "Left"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AjoutObjConcern"
+                  },
+                  "parameters": [
+                    "",
+                    "Card"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeLayer"
+                  },
+                  "parameters": [
+                    "Card",
+                    "\"\""
+                  ]
+                }
+              ]
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Grab",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "DraggableBehavior::Dragged"
+                      },
+                      "parameters": [
+                        "Card",
+                        "Draggable"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "Card",
+                        "IsDragged",
+                        "True"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ObjectStack::ObjectStack::Clear"
+                      },
+                      "parameters": [
+                        "Selection",
+                        "ObjectStack",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "Selection",
+                        "CardCount",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Several cards from tableaux can be dragged at once.\nThey are stuck together with an intermediate object (Glue)\nbecause 2 objects of the same type can't be stick to one another.\n\nThe tableau is saved in the stack of Selection to know where to move cards from\nwhen several cards are dragged at once."
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PosX"
+                          },
+                          "parameters": [
+                            "Tableau",
+                            "=",
+                            "Card.X()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ObjectStack::Contains"
+                          },
+                          "parameters": [
+                            "",
+                            "Tableau",
+                            "ObjectStack",
+                            "Card",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ObjectStack::ObjectStack::AddOnTop"
+                          },
+                          "parameters": [
+                            "Selection",
+                            "ObjectStack",
+                            "Tableau",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "Selection",
+                            "CardCount",
+                            "=",
+                            "Tableau.ObjectStack::Height() - Tableau.ObjectStack::HeightOf(Card)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "MettreXY"
+                          },
+                          "parameters": [
+                            "Glue",
+                            "=",
+                            "Card.X()",
+                            "=",
+                            "Card.Y()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Sticker::Sticker::Stick"
+                          },
+                          "parameters": [
+                            "Glue",
+                            "Sticker",
+                            "Card",
+                            ""
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "AjoutObjConcern"
+                              },
+                              "parameters": [
+                                "",
+                                "Card"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Sticker::Sticker::Unstick"
+                              },
+                              "parameters": [
+                                "Card",
+                                "Sticker",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ChangeLayer"
+                              },
+                              "parameters": [
+                                "Card",
+                                "\"\""
+                              ]
+                            }
+                          ],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "ObjectStack::ContainsBetween"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Tableau",
+                                    "ObjectStack",
+                                    "Card",
+                                    "Tableau.ObjectStack::Height() -Selection.Variable(CardCount) + 1",
+                                    "Tableau.ObjectStack::Height() - 1",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "Sticker::Sticker::Stick"
+                                  },
+                                  "parameters": [
+                                    "Card",
+                                    "Sticker",
+                                    "Glue",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ChangeLayer"
+                                  },
+                                  "parameters": [
+                                    "Card",
+                                    "\"Dragging Layer\""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ActivateBehavior"
+                                  },
+                                  "parameters": [
+                                    "Card",
+                                    "Draggable",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "DebuggerTools::ConsoleLog"
+                                  },
+                                  "parameters": [
+                                    "ToString(PickedInstancesCount(Card))",
+                                    "",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ChangeLayer"
+                          },
+                          "parameters": [
+                            "Card",
+                            "\"Dragging Layer\""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Drop",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "ObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "Card",
+                        "IsDragged",
+                        "True"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "DraggableBehavior::Dragged"
+                      },
+                      "parameters": [
+                        "Card",
+                        "Draggable"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "Card",
+                        "IsDragged",
+                        "False"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetSceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "cardIsMoved",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "cardId",
+                        "=",
+                        "Card.PlayingCard::Id()"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "colorB": 228,
+                      "colorG": 176,
+                      "colorR": 74,
+                      "creationTime": 0,
+                      "name": "Tableau",
+                      "source": "",
+                      "type": "BuiltinCommonInstructions::Group",
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "CollisionPoint"
+                              },
+                              "parameters": [
+                                "Tableau",
+                                "Card.X()",
+                                "Card.Y() + Card.Height() / 4"
+                              ]
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "The cardIsMoved variable is used to forget the cards that are picked by the condition\nand continue with the card that has been dragged."
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Or"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": [
+                                    {
+                                      "type": {
+                                        "value": "BuiltinCommonInstructions::And"
+                                      },
+                                      "parameters": [],
+                                      "subInstructions": [
+                                        {
+                                          "type": {
+                                            "value": "ObjectStack::ObjectStack::IsEmpty"
+                                          },
+                                          "parameters": [
+                                            "Tableau",
+                                            "ObjectStack",
+                                            ""
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "BuiltinCommonInstructions::And"
+                                      },
+                                      "parameters": [],
+                                      "subInstructions": [
+                                        {
+                                          "type": {
+                                            "value": "AjoutObjConcern"
+                                          },
+                                          "parameters": [
+                                            "",
+                                            "Card"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "ObjectStack::HasOnTop"
+                                          },
+                                          "parameters": [
+                                            "",
+                                            "Tableau",
+                                            "ObjectStack",
+                                            "Card",
+                                            ""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "inverted": true,
+                                            "value": "PlayingCard::PlayingCard::CheckColor"
+                                          },
+                                          "parameters": [
+                                            "Card",
+                                            "PlayingCard",
+                                            "PlayingCard::Color(Variable(cardId))",
+                                            ""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "PlayingCard::PlayingCard::CheckValue"
+                                          },
+                                          "parameters": [
+                                            "Card",
+                                            "PlayingCard",
+                                            "PlayingCard::Value(Variable(cardId)) + 1",
+                                            ""
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetSceneVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "cardIsMoved",
+                                    "True"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "SceneVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "cardIsMoved",
+                                    "True"
+                                  ]
+                                }
+                              ],
+                              "actions": [],
+                              "events": [
+                                {
+                                  "type": "BuiltinCommonInstructions::Comment",
+                                  "color": {
+                                    "b": 109,
+                                    "g": 230,
+                                    "r": 255,
+                                    "textB": 0,
+                                    "textG": 0,
+                                    "textR": 0
+                                  },
+                                  "comment": "Only one card has been dragged and it's been selected by parent conditions."
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "VarObjet"
+                                      },
+                                      "parameters": [
+                                        "Selection",
+                                        "CardCount",
+                                        "=",
+                                        "1"
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [],
+                                  "events": [
+                                    {
+                                      "type": "BuiltinCommonInstructions::Comment",
+                                      "color": {
+                                        "b": 109,
+                                        "g": 230,
+                                        "r": 255,
+                                        "textB": 0,
+                                        "textG": 0,
+                                        "textR": 0
+                                      },
+                                      "comment": "It can simply be removed from whatever stack it was from."
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "AjoutObjConcern"
+                                          },
+                                          "parameters": [
+                                            "",
+                                            "Tableau"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "ObjectStack::ObjectStack::Remove"
+                                          },
+                                          "parameters": [
+                                            "CardStack",
+                                            "ObjectStack",
+                                            "Card",
+                                            ""
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "ObjectStack::ObjectStack::AddOnTop"
+                                          },
+                                          "parameters": [
+                                            "Tableau",
+                                            "ObjectStack",
+                                            "Card",
+                                            ""
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Comment",
+                                  "color": {
+                                    "b": 109,
+                                    "g": 230,
+                                    "r": 255,
+                                    "textB": 0,
+                                    "textG": 0,
+                                    "textR": 0
+                                  },
+                                  "comment": "When several cards are dragged at once, only one is selected by parent conditions."
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "VarObjet"
+                                      },
+                                      "parameters": [
+                                        "Selection",
+                                        "CardCount",
+                                        ">",
+                                        "1"
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [],
+                                  "events": [
+                                    {
+                                      "type": "BuiltinCommonInstructions::Comment",
+                                      "color": {
+                                        "b": 109,
+                                        "g": 230,
+                                        "r": 255,
+                                        "textB": 0,
+                                        "textG": 0,
+                                        "textR": 0
+                                      },
+                                      "comment": "The data from Selection are used to find which cards to move."
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "AjoutObjConcern"
+                                          },
+                                          "parameters": [
+                                            "",
+                                            "Tableau"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "ObjectStack::HasOnTop"
+                                          },
+                                          "parameters": [
+                                            "",
+                                            "Selection",
+                                            "ObjectStack",
+                                            "Tableau",
+                                            ""
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "ObjectStack::ObjectStack::MoveInto"
+                                          },
+                                          "parameters": [
+                                            "Swap",
+                                            "ObjectStack",
+                                            "0",
+                                            "Tableau",
+                                            "ObjectStack",
+                                            "Tableau.ObjectStack::Height() - Selection.Variable(CardCount)",
+                                            "Tableau.ObjectStack::Height() - 1",
+                                            ""
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "ObjectStack::ObjectStack::MoveInto"
+                                          },
+                                          "parameters": [
+                                            "Tableau",
+                                            "ObjectStack",
+                                            "Tableau.ObjectStack::Height()",
+                                            "Swap",
+                                            "ObjectStack",
+                                            "0",
+                                            "Swap.ObjectStack::Height() - 1",
+                                            ""
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Comment",
+                                  "color": {
+                                    "b": 109,
+                                    "g": 230,
+                                    "r": 255,
+                                    "textB": 0,
+                                    "textG": 0,
+                                    "textR": 0
+                                  },
+                                  "comment": "Align the cards of the tableau column where new cards have been dragged.\nBecause they were probably not dropped exactly where they should be."
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "AjoutObjConcern"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "Card"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "ObjectStack::Contains"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "Tableau",
+                                        "ObjectStack",
+                                        "Card",
+                                        ""
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [],
+                                  "events": [
+                                    {
+                                      "type": "BuiltinCommonInstructions::ForEach",
+                                      "object": "Card",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "inverted": true,
+                                            "value": "AnimatableCapability::AnimatableBehavior::Name"
+                                          },
+                                          "parameters": [
+                                            "Card",
+                                            "Animation",
+                                            "=",
+                                            "\"Back\""
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "MettreXY"
+                                          },
+                                          "parameters": [
+                                            "Card",
+                                            "=",
+                                            "Tableau.X()",
+                                            "=",
+                                            "Tableau.Y() + Tableau.ObjectStack::HeightOf(Card) * 16"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "ChangeLayer"
+                                          },
+                                          "parameters": [
+                                            "Card",
+                                            "\"\""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "ChangePlan"
+                                          },
+                                          "parameters": [
+                                            "Card",
+                                            "=",
+                                            "Tableau.ObjectStack::HeightOf(Card)"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "Sticker::Sticker::Unstick"
+                                          },
+                                          "parameters": [
+                                            "Card",
+                                            "Sticker",
+                                            ""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "ActivateBehavior"
+                                          },
+                                          "parameters": [
+                                            "Card",
+                                            "Draggable",
+                                            "yes"
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "parameters": []
+                    },
+                    {
+                      "colorB": 228,
+                      "colorG": 176,
+                      "colorR": 74,
+                      "creationTime": 0,
+                      "name": "Fondation",
+                      "source": "",
+                      "type": "BuiltinCommonInstructions::Group",
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "See comments from the previous section."
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "VarObjet"
+                              },
+                              "parameters": [
+                                "Selection",
+                                "CardCount",
+                                "=",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "CollisionPoint"
+                              },
+                              "parameters": [
+                                "Fondation",
+                                "Card.X()",
+                                "Card.Y() + Card.Height() / 4"
+                              ]
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Or"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": [
+                                    {
+                                      "type": {
+                                        "value": "BuiltinCommonInstructions::And"
+                                      },
+                                      "parameters": [],
+                                      "subInstructions": [
+                                        {
+                                          "type": {
+                                            "value": "ObjectStack::ObjectStack::IsEmpty"
+                                          },
+                                          "parameters": [
+                                            "Fondation",
+                                            "ObjectStack",
+                                            ""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "PlayingCard::PlayingCard::CheckValue"
+                                          },
+                                          "parameters": [
+                                            "Card",
+                                            "PlayingCard",
+                                            "0",
+                                            ""
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "BuiltinCommonInstructions::And"
+                                      },
+                                      "parameters": [],
+                                      "subInstructions": [
+                                        {
+                                          "type": {
+                                            "value": "AjoutObjConcern"
+                                          },
+                                          "parameters": [
+                                            "",
+                                            "Card"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "ObjectStack::HasOnTop"
+                                          },
+                                          "parameters": [
+                                            "",
+                                            "Fondation",
+                                            "ObjectStack",
+                                            "Card",
+                                            ""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "PlayingCard::PlayingCard::CheckSuiteId"
+                                          },
+                                          "parameters": [
+                                            "Card",
+                                            "PlayingCard",
+                                            "PlayingCard::SuiteId(Variable(cardId))",
+                                            ""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "PlayingCard::PlayingCard::CheckValue"
+                                          },
+                                          "parameters": [
+                                            "Card",
+                                            "PlayingCard",
+                                            "PlayingCard::Value(Variable(cardId)) - 1",
+                                            ""
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetSceneVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "cardIsMoved",
+                                    "True"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "SceneVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "cardIsMoved",
+                                    "True"
+                                  ]
+                                }
+                              ],
+                              "actions": [],
+                              "events": [
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "AjoutObjConcern"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "CardStack"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "ObjectStack::ObjectStack::Remove"
+                                      },
+                                      "parameters": [
+                                        "CardStack",
+                                        "ObjectStack",
+                                        "Card",
+                                        ""
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "ObjectStack::ObjectStack::AddOnTop"
+                                      },
+                                      "parameters": [
+                                        "Fondation",
+                                        "ObjectStack",
+                                        "Card",
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "MettreXY"
+                                      },
+                                      "parameters": [
+                                        "Card",
+                                        "=",
+                                        "Fondation.X()",
+                                        "=",
+                                        "Fondation.Y()"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "ChangeLayer"
+                                      },
+                                      "parameters": [
+                                        "Card",
+                                        "\"\""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "ChangePlan"
+                                      },
+                                      "parameters": [
+                                        "Card",
+                                        "=",
+                                        "Fondation.ObjectStack::Height()"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "ActivateBehavior"
+                                      },
+                                      "parameters": [
+                                        "Card",
+                                        "Draggable",
+                                        ""
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "parameters": []
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "SceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "cardIsMoved",
+                            "IsDragged"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "CancellableDraggable::CancellableDraggable::CancelLastDragging"
+                          },
+                          "parameters": [
+                            "Card",
+                            "CancellableDragable",
+                            "200",
+                            "\"linear\"",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Reveal the cards that are now on top of the tableau columns after the dragging."
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "SceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "cardIsMoved",
+                            "True"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AjoutObjConcern"
+                          },
+                          "parameters": [
+                            "",
+                            "Card"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::ForEach",
+                          "object": "Tableau",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "ObjectStack::HasOnTop"
+                              },
+                              "parameters": [
+                                "",
+                                "Tableau",
+                                "ObjectStack",
+                                "Card",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
+                              },
+                              "parameters": [
+                                "Card",
+                                "Animation",
+                                "=",
+                                "Card.Variable(CardId)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ActivateBehavior"
+                              },
+                              "parameters": [
+                                "Card",
+                                "Draggable",
+                                "yes"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Release cards when several ones were moved together."
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CancellableDraggable::CancellableDraggable::DraggingIsCancelled"
+              },
+              "parameters": [
+                "Card",
+                "CancellableDragable",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "AjoutObjConcern"
+              },
+              "parameters": [
+                "",
+                "Card"
+              ]
+            },
+            {
+              "type": {
+                "value": "Sticker::IsStuck"
+              },
+              "parameters": [
+                "",
+                "Card",
+                "Sticker",
+                "Glue",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "Sticker::Sticker::Unstick"
+              },
+              "parameters": [
+                "Card",
+                "Sticker",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "Card",
+                "Draggable",
+                "yes"
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    }
+  ]
+}

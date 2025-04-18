@@ -1,0 +1,108 @@
+{
+  "associatedLayout": "0.1 -🌼 JOGO PRINCIPAL - 3D Run",
+  "name": "LevelBasicEvents",
+  "events": [
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "we have completed the game, unlock the next level (The name of the next level is stored in a variable called NextLevel)and write it in to storage so when we go back to level selection, it is going to read the new value from storage and we should have the next level unlocked. This is not done for Level 6 as there is no level after it"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "DepartScene"
+          },
+          "parameters": [
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "StrEqual"
+          },
+          "parameters": [
+            "CurrentSceneName()",
+            "!=",
+            "\"Level14\""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "EcrireFichierTxt"
+          },
+          "parameters": [
+            "\"LevelStatus\"",
+            "VariableString(NextLevel)",
+            "\"Unlocked\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "if button is pressed, go back to level selection"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "SourisBouton"
+          },
+          "parameters": [
+            "",
+            "Left"
+          ]
+        },
+        {
+          "type": {
+            "value": "SourisSurObjet"
+          },
+          "parameters": [
+            "LevelSelectionBtn",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Scene"
+          },
+          "parameters": [
+            "",
+            "\"🐶 3 - 🗺 LevelSelection\"",
+            "yes"
+          ]
+        }
+      ]
+    }
+  ]
+}

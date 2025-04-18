@@ -1,0 +1,107 @@
+{
+  "author": "",
+  "category": "",
+  "extensionNamespace": "",
+  "fullName": "",
+  "helpPath": "",
+  "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0ibWRpLXRpbWVyLW91dGxpbmUiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIsMjBBNyw3IDAgMCwxIDUsMTNBNyw3IDAgMCwxIDEyLDZBNyw3IDAgMCwxIDE5LDEzQTcsNyAwIDAsMSAxMiwyME0xOS4wMyw3LjM5TDIwLjQ1LDUuOTdDMjAsNS40NiAxOS41NSw1IDE5LjA0LDQuNTZMMTcuNjIsNkMxNi4wNyw0Ljc0IDE0LjEyLDQgMTIsNEE5LDkgMCAwLDAgMywxM0E5LDkgMCAwLDAgMTIsMjJDMTcsMjIgMjEsMTcuOTcgMjEsMTNDMjEsMTAuODggMjAuMjYsOC45MyAxOS4wMyw3LjM5TTExLDE0SDEzVjhIMTFNMTUsMUg5VjNIMTVWMVoiIC8+PC9zdmc+",
+  "name": "AdvancedTimer",
+  "previewIconUrl": "https://asset-resources.gdevelop.io/public-resources/Icons/632ad4b4fbdffa09f26d1e73058989bd488b2441c4e85b125c6db16c39c1a1c3_timer-outline.svg",
+  "shortDescription": "",
+  "version": "",
+  "description": "",
+  "tags": [],
+  "authorIds": [],
+  "dependencies": [],
+  "globalVariables": [],
+  "sceneVariables": [],
+  "eventsFunctions": [
+    {
+      "fullName": "",
+      "functionType": "ActionWithOperator",
+      "getterName": "ObjectTimerElapsedTime",
+      "name": "SetObjectTimerElapsedTime",
+      "sentence": "",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": [
+            "const timerName = eventsFunctionContext.getArgument(\"Timer\");",
+            "const timerValue = eventsFunctionContext.getArgument(\"Value\");",
+            "",
+            "for (const object of objects) {",
+            "    object.unpauseTimer(timerName);",
+            "    object._timers.get(timerName).setTime(timerValue * 1000);",
+            "}",
+            ""
+          ],
+          "parameterObjects": "Object",
+          "useStrict": true,
+          "eventsSheetExpanded": true
+        }
+      ],
+      "parameters": [
+        {
+          "description": "Object",
+          "name": "Object",
+          "type": "objectList"
+        },
+        {
+          "description": "Timer's name",
+          "name": "Timer",
+          "supplementaryInformation": "objectobjectTimer",
+          "type": "identifier"
+        },
+        {
+          "description": "Time in seconds",
+          "name": "Value",
+          "type": "expression"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "description": "the elapsed time of an object timer.",
+      "fullName": "Object timer value",
+      "functionType": "ExpressionAndCondition",
+      "name": "ObjectTimerElapsedTime",
+      "private": true,
+      "sentence": "the timer _PARAM1_ of _PARAM2_",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SetReturnNumber"
+              },
+              "parameters": [
+                "Object.ObjectTimerElapsedTime(GetArgumentAsString(\"Timer\"))"
+              ]
+            }
+          ]
+        }
+      ],
+      "expressionType": {
+        "type": "expression"
+      },
+      "parameters": [
+        {
+          "description": "Object",
+          "name": "Object",
+          "type": "objectList"
+        },
+        {
+          "description": "Timer's name",
+          "name": "Timer",
+          "supplementaryInformation": "objectobjectTimer",
+          "type": "identifier"
+        }
+      ],
+      "objectGroups": []
+    }
+  ],
+  "eventsBasedBehaviors": [],
+  "eventsBasedObjects": []
+}

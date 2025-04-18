@@ -1,0 +1,235 @@
+{
+  "associatedLayout": "0.1 -🌼 JOGO PRINCIPAL - 3D Run",
+  "name": "Layout5",
+  "instances": [
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 160,
+      "height": 160,
+      "layer": "",
+      "name": "Ground",
+      "persistentUuid": "e13b9837-4ab4-475d-a1ab-5f727ead59da",
+      "width": 1024,
+      "x": 0,
+      "y": 192,
+      "z": 80,
+      "zOrder": 4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "Lane",
+          "type": "number",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 160,
+      "height": 160,
+      "layer": "",
+      "name": "Ground",
+      "persistentUuid": "556b77d2-6dc6-417c-8192-60501f4ec644",
+      "width": 1024,
+      "x": 0,
+      "y": 192,
+      "z": -80,
+      "zOrder": 4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "Lane",
+          "type": "number",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 160,
+      "height": 160,
+      "layer": "",
+      "name": "Ground",
+      "persistentUuid": "9cf32052-9522-451a-b8b2-564788873f4a",
+      "width": 1024,
+      "x": 0,
+      "y": 192,
+      "z": 240,
+      "zOrder": 4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "Lane",
+          "type": "number",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 64,
+      "layer": "",
+      "name": "StartMarker",
+      "persistentUuid": "98cde4eb-fbdc-4ecf-9b4b-12c22f86dcd0",
+      "width": 64,
+      "x": 0,
+      "y": 0,
+      "zOrder": 3,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 80,
+      "height": 80,
+      "layer": "",
+      "name": "Inimigo1",
+      "persistentUuid": "1af66394-f474-4aec-8fab-861cd0542aa6",
+      "width": 96,
+      "x": 688,
+      "y": 152,
+      "z": 160,
+      "zOrder": 5,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "Lane",
+          "type": "number",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 80,
+      "height": 80,
+      "layer": "",
+      "name": "Inimigo1",
+      "persistentUuid": "1bfd08fc-6991-4146-b94f-3355a73b0a77",
+      "width": 96,
+      "x": 688,
+      "y": 152,
+      "zOrder": 5,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 80,
+      "height": 80,
+      "layer": "",
+      "name": "Inimigo1",
+      "persistentUuid": "5143812a-0b9e-4b26-9e94-51032ca22316",
+      "width": 96,
+      "x": 688,
+      "y": 152,
+      "z": 320,
+      "zOrder": 5,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "Lane",
+          "type": "number",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 10,
+      "height": 64,
+      "layer": "",
+      "name": "Coin",
+      "persistentUuid": "3eba5768-f945-4e72-92c7-c0098f6bb675",
+      "width": 64,
+      "x": 352,
+      "y": 128,
+      "z": 160,
+      "zOrder": 6,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "Lane",
+          "type": "number",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 10,
+      "height": 64,
+      "layer": "",
+      "name": "Coin",
+      "persistentUuid": "ccbe5c16-fd57-4f55-b58c-c4f8b95eb171",
+      "width": 64,
+      "x": 512,
+      "y": 128,
+      "zOrder": 6,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 10,
+      "height": 64,
+      "layer": "",
+      "name": "Coin",
+      "persistentUuid": "35a8297d-c18b-4daa-af27-6b89f69bfa83",
+      "width": 64,
+      "x": 192,
+      "y": 128,
+      "z": 320,
+      "zOrder": 6,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "Lane",
+          "type": "number",
+          "value": 2
+        }
+      ]
+    }
+  ],
+  "editionSettings": {
+    "grid": true,
+    "gridType": "rectangular",
+    "gridWidth": 32,
+    "gridHeight": 32,
+    "gridOffsetX": 0,
+    "gridOffsetY": 0,
+    "gridColor": 10401023,
+    "gridAlpha": 0.8,
+    "snap": true,
+    "zoomFactor": 0.4789341884535246,
+    "windowMask": false
+  }
+}

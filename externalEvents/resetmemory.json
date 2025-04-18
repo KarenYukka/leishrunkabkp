@@ -1,0 +1,172 @@
+{
+  "associatedLayout": "🐶 3 - 🗺 LevelSelection",
+  "name": "ResetMemory",
+  "events": [
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "if the status of level1 does not exist in storage, that indicates this is the first time we run the game\nLock all level buttons except level1 and write these values in to storage"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": true,
+            "value": "GroupExists"
+          },
+          "parameters": [
+            "\"LevelStatus\"",
+            "\"Level1\""
+          ]
+        }
+      ],
+      "actions": [],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "EcrireFichierTxt"
+              },
+              "parameters": [
+                "\"LevelStatus\"",
+                "\"Level1\"",
+                "\"Unlocked\""
+              ]
+            },
+            {
+              "type": {
+                "value": "EcrireFichierTxt"
+              },
+              "parameters": [
+                "\"LevelStatus\"",
+                "\"Level2\"",
+                "\"Locked\""
+              ]
+            },
+            {
+              "type": {
+                "value": "EcrireFichierTxt"
+              },
+              "parameters": [
+                "\"LevelStatus\"",
+                "\"Level3\"",
+                "\"Locked\""
+              ]
+            },
+            {
+              "type": {
+                "value": "EcrireFichierTxt"
+              },
+              "parameters": [
+                "\"LevelStatus\"",
+                "\"Level4\"",
+                "\"Locked\""
+              ]
+            },
+            {
+              "type": {
+                "value": "EcrireFichierTxt"
+              },
+              "parameters": [
+                "\"LevelStatus\"",
+                "\"Level5\"",
+                "\"Locked\""
+              ]
+            },
+            {
+              "type": {
+                "value": "EcrireFichierTxt"
+              },
+              "parameters": [
+                "\"LevelStatus\"",
+                "\"Level6\"",
+                "\"Locked\""
+              ]
+            },
+            {
+              "type": {
+                "value": "EcrireFichierTxt"
+              },
+              "parameters": [
+                "\"LevelStatus\"",
+                "\"Level7\"",
+                "\"Locked\""
+              ]
+            },
+            {
+              "type": {
+                "value": "EcrireFichierTxt"
+              },
+              "parameters": [
+                "\"LevelStatus\"",
+                "\"Level8\"",
+                "\"Locked\""
+              ]
+            },
+            {
+              "type": {
+                "value": "EcrireFichierTxt"
+              },
+              "parameters": [
+                "\"LevelStatus\"",
+                "\"Level9\"",
+                "\"Locked\""
+              ]
+            },
+            {
+              "type": {
+                "value": "EcrireFichierTxt"
+              },
+              "parameters": [
+                "\"LevelStatus\"",
+                "\"Level10\"",
+                "\"Locked\""
+              ]
+            },
+            {
+              "type": {
+                "value": "EcrireFichierTxt"
+              },
+              "parameters": [
+                "\"LevelStatus\"",
+                "\"Level11\"",
+                "\"Locked\""
+              ]
+            },
+            {
+              "type": {
+                "value": "EcrireFichierTxt"
+              },
+              "parameters": [
+                "\"LevelStatus\"",
+                "\"Level12\"",
+                "\"Locked\""
+              ]
+            },
+            {
+              "type": {
+                "value": "EcrireFichierTxt"
+              },
+              "parameters": [
+                "\"LevelStatus\"",
+                "\"Level13\"",
+                "\"Locked\""
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "associatedLayout": "0.1 -🌼 JOGO PRINCIPAL - 3D Run",
+  "name": "Layout9",
+  "instances": [
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 160,
+      "height": 160,
+      "layer": "",
+      "name": "Ground",
+      "persistentUuid": "e13b9837-4ab4-475d-a1ab-5f727ead59da",
+      "width": 1024,
+      "x": 0,
+      "y": 192,
+      "z": 80,
+      "zOrder": 4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "Lane",
+          "type": "number",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 64,
+      "layer": "",
+      "name": "StartMarker",
+      "persistentUuid": "98cde4eb-fbdc-4ecf-9b4b-12c22f86dcd0",
+      "width": 64,
+      "x": 0,
+      "y": 0,
+      "zOrder": 3,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 160,
+      "height": 160,
+      "layer": "",
+      "name": "Ground",
+      "persistentUuid": "0f9ab667-093e-4cb1-9767-9758486f0ba8",
+      "width": 96,
+      "x": 0,
+      "y": 192,
+      "z": 240,
+      "zOrder": 4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "Lane",
+          "type": "number",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 160,
+      "height": 160,
+      "layer": "",
+      "name": "Ground",
+      "persistentUuid": "83b20036-e69d-4a55-b2dc-2db1a4e59eca",
+      "width": 96,
+      "x": 0,
+      "y": 192,
+      "z": -80,
+      "zOrder": 4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "Lane",
+          "type": "number",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 10,
+      "height": 64,
+      "layer": "",
+      "name": "Coin",
+      "persistentUuid": "100d8ba2-873b-4e80-9cef-fcfb5c723528",
+      "width": 64,
+      "x": 128,
+      "y": 128,
+      "z": 160,
+      "zOrder": 6,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "Lane",
+          "type": "number",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 10,
+      "height": 64,
+      "layer": "",
+      "name": "Coin",
+      "persistentUuid": "0859f0c1-0208-4487-a8d8-3a9d38905937",
+      "width": 64,
+      "x": 256,
+      "y": 128,
+      "z": 160,
+      "zOrder": 6,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "Lane",
+          "type": "number",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 10,
+      "height": 64,
+      "layer": "",
+      "name": "Coin",
+      "persistentUuid": "d6dda353-d34a-4200-973b-61f501d2a7ce",
+      "width": 64,
+      "x": 512,
+      "y": 128,
+      "z": 160,
+      "zOrder": 6,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "Lane",
+          "type": "number",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 10,
+      "height": 64,
+      "layer": "",
+      "name": "Coin",
+      "persistentUuid": "1c95f325-9227-4ad4-9c22-70c0456833bc",
+      "width": 64,
+      "x": 384,
+      "y": 128,
+      "z": 160,
+      "zOrder": 6,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "Lane",
+          "type": "number",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 80,
+      "height": 80,
+      "layer": "",
+      "name": "Inimigo1",
+      "persistentUuid": "f60aba27-0158-42c5-af61-9e6c43ed3598",
+      "width": 96,
+      "x": 784,
+      "y": 152,
+      "z": 160,
+      "zOrder": 5,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "Lane",
+          "type": "number",
+          "value": 1
+        }
+      ]
+    }
+  ],
+  "editionSettings": {
+    "grid": true,
+    "gridType": "rectangular",
+    "gridWidth": 32,
+    "gridHeight": 32,
+    "gridOffsetX": 0,
+    "gridOffsetY": 0,
+    "gridColor": 10401023,
+    "gridAlpha": 0.8,
+    "snap": true,
+    "zoomFactor": 0.5843784410740929,
+    "windowMask": false
+  }
+}

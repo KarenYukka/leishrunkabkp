@@ -1,0 +1,275 @@
+{
+  "associatedLayout": "0.1 -🌼 JOGO PRINCIPAL - 3D Run",
+  "name": "Layout6",
+  "instances": [
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 160,
+      "height": 160,
+      "layer": "",
+      "name": "Ground",
+      "persistentUuid": "e13b9837-4ab4-475d-a1ab-5f727ead59da",
+      "width": 256,
+      "x": 0,
+      "y": 192,
+      "z": 80,
+      "zOrder": 4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "Lane",
+          "type": "number",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 64,
+      "layer": "",
+      "name": "StartMarker",
+      "persistentUuid": "98cde4eb-fbdc-4ecf-9b4b-12c22f86dcd0",
+      "width": 64,
+      "x": 0,
+      "y": 0,
+      "zOrder": 3,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 160,
+      "height": 160,
+      "layer": "",
+      "name": "Ground",
+      "persistentUuid": "0f9ab667-093e-4cb1-9767-9758486f0ba8",
+      "width": 1024,
+      "x": 0,
+      "y": 192,
+      "z": 240,
+      "zOrder": 4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "Lane",
+          "type": "number",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 160,
+      "height": 160,
+      "layer": "",
+      "name": "Ground",
+      "persistentUuid": "83b20036-e69d-4a55-b2dc-2db1a4e59eca",
+      "width": 1024,
+      "x": 0,
+      "y": 192,
+      "z": -80,
+      "zOrder": 4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "Lane",
+          "type": "number",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 160,
+      "height": 160,
+      "layer": "",
+      "name": "Ground",
+      "persistentUuid": "35843c40-c437-4151-8486-1272fb8734c6",
+      "width": 448,
+      "x": 576,
+      "y": 192,
+      "z": 80,
+      "zOrder": 4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "Lane",
+          "type": "number",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 10,
+      "height": 64,
+      "layer": "",
+      "name": "Coin",
+      "persistentUuid": "100d8ba2-873b-4e80-9cef-fcfb5c723528",
+      "width": 64,
+      "x": 192,
+      "y": 128,
+      "z": 160,
+      "zOrder": 6,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "Lane",
+          "type": "number",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 10,
+      "height": 64,
+      "layer": "",
+      "name": "Coin",
+      "persistentUuid": "0859f0c1-0208-4487-a8d8-3a9d38905937",
+      "width": 64,
+      "x": 352,
+      "y": 32,
+      "z": 160,
+      "zOrder": 6,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "Lane",
+          "type": "number",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 10,
+      "height": 64,
+      "layer": "",
+      "name": "Coin",
+      "persistentUuid": "d6dda353-d34a-4200-973b-61f501d2a7ce",
+      "width": 64,
+      "x": 480,
+      "y": 32,
+      "z": 160,
+      "zOrder": 6,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "Lane",
+          "type": "number",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 10,
+      "height": 64,
+      "layer": "",
+      "name": "Coin",
+      "persistentUuid": "0ef18cb7-7258-488a-a15b-59ee2419bb6a",
+      "width": 64,
+      "x": 896,
+      "y": 128,
+      "z": 160,
+      "zOrder": 6,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "Lane",
+          "type": "number",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 10,
+      "height": 64,
+      "layer": "",
+      "name": "Coin",
+      "persistentUuid": "4390fffc-67ee-453f-8853-53bd9b201f81",
+      "width": 64,
+      "x": 640,
+      "y": 128,
+      "z": 160,
+      "zOrder": 6,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "Lane",
+          "type": "number",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 10,
+      "height": 64,
+      "layer": "",
+      "name": "Coin",
+      "persistentUuid": "d7b5a171-ef87-47e5-be4f-68ba46f958b1",
+      "width": 64,
+      "x": 768,
+      "y": 128,
+      "z": 160,
+      "zOrder": 6,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "Lane",
+          "type": "number",
+          "value": 1
+        }
+      ]
+    }
+  ],
+  "editionSettings": {
+    "grid": true,
+    "gridType": "rectangular",
+    "gridWidth": 32,
+    "gridHeight": 32,
+    "gridOffsetX": 0,
+    "gridOffsetY": 0,
+    "gridColor": 10401023,
+    "gridAlpha": 0.8,
+    "snap": true,
+    "zoomFactor": 0.43357743047023733,
+    "windowMask": false
+  }
+}

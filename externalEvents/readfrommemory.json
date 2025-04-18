@@ -1,0 +1,327 @@
+{
+  "associatedLayout": "🐶 3 - 🗺 LevelSelection",
+  "name": "ReadFromMemory",
+  "events": [
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "if the status of level1 exist in storage, we should have this info for all level buttons in storage\nread these values from storage and store them inside object variables for each button object"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "GroupExists"
+          },
+          "parameters": [
+            "\"LevelStatus\"",
+            "\"Level1\""
+          ]
+        }
+      ],
+      "actions": [],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "LireFichierTxt"
+              },
+              "parameters": [
+                "\"LevelStatus\"",
+                "\"Level1\"",
+                "",
+                "LoadStatus.Level1"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarObjetTxt"
+              },
+              "parameters": [
+                "Level1Btn",
+                "status",
+                "=",
+                "VariableString(LoadStatus.Level1)"
+              ]
+            },
+            {
+              "type": {
+                "value": "LireFichierTxt"
+              },
+              "parameters": [
+                "\"LevelStatus\"",
+                "\"Level2\"",
+                "",
+                "LoadStatus.Level2"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarObjetTxt"
+              },
+              "parameters": [
+                "Level2Btn",
+                "status",
+                "=",
+                "VariableString(LoadStatus.Level2)"
+              ]
+            },
+            {
+              "type": {
+                "value": "LireFichierTxt"
+              },
+              "parameters": [
+                "\"LevelStatus\"",
+                "\"Level3\"",
+                "",
+                "LoadStatus.Level3"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarObjetTxt"
+              },
+              "parameters": [
+                "Level3Btn",
+                "status",
+                "=",
+                "VariableString(LoadStatus.Level3)"
+              ]
+            },
+            {
+              "type": {
+                "value": "LireFichierTxt"
+              },
+              "parameters": [
+                "\"LevelStatus\"",
+                "\"Level4\"",
+                "",
+                "LoadStatus.Level4"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarObjetTxt"
+              },
+              "parameters": [
+                "Level4Btn",
+                "status",
+                "=",
+                "VariableString(LoadStatus.Level4)"
+              ]
+            },
+            {
+              "type": {
+                "value": "LireFichierTxt"
+              },
+              "parameters": [
+                "\"LevelStatus\"",
+                "\"Level5\"",
+                "",
+                "LoadStatus.Level5"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarObjetTxt"
+              },
+              "parameters": [
+                "Level5Btn",
+                "status",
+                "=",
+                "VariableString(LoadStatus.Level5)"
+              ]
+            },
+            {
+              "type": {
+                "value": "LireFichierTxt"
+              },
+              "parameters": [
+                "\"LevelStatus\"",
+                "\"Level6\"",
+                "",
+                "LoadStatus.Level6"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarObjetTxt"
+              },
+              "parameters": [
+                "Level6Btn",
+                "status",
+                "=",
+                "VariableString(LoadStatus.Level6)"
+              ]
+            },
+            {
+              "type": {
+                "value": "LireFichierTxt"
+              },
+              "parameters": [
+                "\"LevelStatus\"",
+                "\"Level7\"",
+                "",
+                "LoadStatus.Level7"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarObjetTxt"
+              },
+              "parameters": [
+                "Level7Btn",
+                "status",
+                "=",
+                "VariableString(LoadStatus.Level7)"
+              ]
+            },
+            {
+              "type": {
+                "value": "LireFichierTxt"
+              },
+              "parameters": [
+                "\"LevelStatus\"",
+                "\"Level8\"",
+                "",
+                "LoadStatus.Level8"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarObjetTxt"
+              },
+              "parameters": [
+                "Level8Btn",
+                "status",
+                "=",
+                "VariableString(LoadStatus.Level8)"
+              ]
+            },
+            {
+              "type": {
+                "value": "LireFichierTxt"
+              },
+              "parameters": [
+                "\"LevelStatus\"",
+                "\"Level9\"",
+                "",
+                "LoadStatus.Level9"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarObjetTxt"
+              },
+              "parameters": [
+                "Level9Btn",
+                "status",
+                "=",
+                "VariableString(LoadStatus.Level9)"
+              ]
+            },
+            {
+              "type": {
+                "value": "LireFichierTxt"
+              },
+              "parameters": [
+                "\"LevelStatus\"",
+                "\"Level10\"",
+                "",
+                "LoadStatus.Level10"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarObjetTxt"
+              },
+              "parameters": [
+                "Level10Btn",
+                "status",
+                "=",
+                "VariableString(LoadStatus.Level10)"
+              ]
+            },
+            {
+              "type": {
+                "value": "LireFichierTxt"
+              },
+              "parameters": [
+                "\"LevelStatus\"",
+                "\"Level11\"",
+                "",
+                "LoadStatus.Level11"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarObjetTxt"
+              },
+              "parameters": [
+                "Level11Btn",
+                "status",
+                "=",
+                "VariableString(LoadStatus.Level11)"
+              ]
+            },
+            {
+              "type": {
+                "value": "LireFichierTxt"
+              },
+              "parameters": [
+                "\"LevelStatus\"",
+                "\"Level12\"",
+                "",
+                "LoadStatus.Level12"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarObjetTxt"
+              },
+              "parameters": [
+                "Level12Btn",
+                "status",
+                "=",
+                "VariableString(LoadStatus.Level12)"
+              ]
+            },
+            {
+              "type": {
+                "value": "LireFichierTxt"
+              },
+              "parameters": [
+                "\"LevelStatus\"",
+                "\"Level13\"",
+                "",
+                "LoadStatus.Level13"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarObjetTxt"
+              },
+              "parameters": [
+                "Level13Btn",
+                "status",
+                "=",
+                "VariableString(LoadStatus.Level13)"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

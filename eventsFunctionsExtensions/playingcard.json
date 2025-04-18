@@ -1,0 +1,646 @@
+{
+  "author": "D8H",
+  "category": "",
+  "extensionNamespace": "",
+  "fullName": "Playing Card",
+  "helpPath": "",
+  "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMy4wLjMsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iSWNvbnMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMzIgMzIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMyIDMyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoyO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9DQo8L3N0eWxlPg0KPHBhdGggY2xhc3M9InN0MCIgZD0iTTMuNiwxMC40YzAuOCwwLjgsMi4yLDAuOCwzLjEsMEw4LDkuMWwxLjMsMS4zYzAuOCwwLjgsMi4yLDAuOCwzLjEsMGMwLjgtMC44LDAuOC0yLjIsMC0zLjFsLTEuMy0xLjNMOCwzDQoJTDQuOSw2LjFMMy42LDcuM0MyLjgsOC4yLDIuOCw5LjUsMy42LDEwLjR6Ii8+DQo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjguNCw0LjdjLTAuOC0wLjktMi4yLTAuOS0zLjEsMEwyNCw2LjFsLTEuMy0xLjRjLTAuOC0wLjktMi4yLTAuOS0zLjEsMHMtMC44LDIuNSwwLDMuNGwxLjMsMS40TDI0LDEzDQoJbDMuMS0zLjRsMS4zLTEuNEMyOS4yLDcuMiwyOS4yLDUuNywyOC40LDQuN3oiLz4NCjxsaW5lIGNsYXNzPSJzdDAiIHgxPSI3IiB5MT0iMTQiIHgyPSI5IiB5Mj0iMTQiLz4NCjxsaW5lIGNsYXNzPSJzdDAiIHgxPSI4IiB5MT0iMTAiIHgyPSI4IiB5Mj0iMTQiLz4NCjxsaW5lIGNsYXNzPSJzdDAiIHgxPSIyMyIgeTE9IjI5IiB4Mj0iMjUiIHkyPSIyOSIvPg0KPGxpbmUgY2xhc3M9InN0MCIgeDE9IjI0IiB5MT0iMjUiIHgyPSIyNCIgeTI9IjI5Ii8+DQo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjYuNSwyMWMtMC4xLDAtMC4yLDAtMC40LDBjMC4yLTAuNCwwLjQtMC44LDAuNC0xLjNjMC0xLjQtMS4xLTIuNS0yLjUtMi41Yy0xLjQsMC0yLjUsMS4xLTIuNSwyLjUNCgljMCwwLjUsMC4xLDAuOSwwLjQsMS4zYy0wLjEsMC0wLjIsMC0wLjQsMGMtMS40LDAtMi41LDEuMS0yLjUsMi41YzAsMS40LDEuMSwyLjUsMi41LDIuNWMxLjIsMCwyLjItMC45LDIuNC0yaDAuMQ0KCWMwLjIsMS4xLDEuMiwyLDIuNCwyYzEuNCwwLDIuNS0xLjEsMi41LTIuNUMyOSwyMi4xLDI3LjksMjEsMjYuNSwyMXoiLz4NCjxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iOCwxOCAzLDIzLjUgOCwyOSAxMywyMy41ICIvPg0KPC9zdmc+DQo=",
+  "name": "PlayingCard",
+  "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/Line Hero Pack/Master/SVG/Videogames/Videogames_cards_card_game_games.svg",
+  "shortDescription": "Evaluate playing card characteristics.",
+  "version": "0.0.1",
+  "description": "",
+  "tags": [],
+  "authorIds": [
+    "IWykYNRvhCZBN3vEgKEbBPOR3Oc2"
+  ],
+  "dependencies": [],
+  "globalVariables": [],
+  "sceneVariables": [],
+  "eventsFunctions": [
+    {
+      "fullName": "Value",
+      "functionType": "Expression",
+      "name": "Value",
+      "sentence": "",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SetReturnNumber"
+              },
+              "parameters": [
+                "mod(GetArgumentAsNumber(\"CardId\"), 13)"
+              ]
+            }
+          ]
+        }
+      ],
+      "expressionType": {
+        "type": "expression"
+      },
+      "parameters": [
+        {
+          "description": "Card ID",
+          "name": "CardId",
+          "type": "expression"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "fullName": "Suite ID",
+      "functionType": "Expression",
+      "name": "SuiteId",
+      "sentence": "",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SetReturnNumber"
+              },
+              "parameters": [
+                "floor(GetArgumentAsNumber(\"CardId\") / 13)"
+              ]
+            }
+          ]
+        }
+      ],
+      "expressionType": {
+        "type": "expression"
+      },
+      "parameters": [
+        {
+          "description": "Card ID",
+          "name": "CardId",
+          "type": "expression"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "fullName": "Color",
+      "functionType": "StringExpression",
+      "name": "Color",
+      "sentence": "",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SetReturnString"
+              },
+              "parameters": [
+                "\"Black\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Egal"
+              },
+              "parameters": [
+                "GetArgumentAsNumber(\"CardId\")",
+                "<=",
+                "25"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetReturnString"
+              },
+              "parameters": [
+                "\"Red\""
+              ]
+            }
+          ]
+        }
+      ],
+      "expressionType": {
+        "type": "string"
+      },
+      "parameters": [
+        {
+          "description": "Card ID",
+          "name": "CardId",
+          "type": "expression"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "description": "Maximum card value",
+      "fullName": "Maximum card value",
+      "functionType": "Expression",
+      "name": "MaxValue",
+      "sentence": "",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SetReturnNumber"
+              },
+              "parameters": [
+                "12"
+              ]
+            }
+          ]
+        }
+      ],
+      "expressionType": {
+        "type": "expression"
+      },
+      "parameters": [],
+      "objectGroups": []
+    },
+    {
+      "description": "Card count",
+      "fullName": "Card count",
+      "functionType": "Expression",
+      "name": "Count",
+      "sentence": "",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SetReturnNumber"
+              },
+              "parameters": [
+                "52"
+              ]
+            }
+          ]
+        }
+      ],
+      "expressionType": {
+        "type": "expression"
+      },
+      "parameters": [],
+      "objectGroups": []
+    }
+  ],
+  "eventsBasedBehaviors": [
+    {
+      "description": "Evaluate playing card characteristics.",
+      "fullName": "Playing Card",
+      "name": "PlayingCard",
+      "objectType": "",
+      "eventsFunctions": [
+        {
+          "description": "Change the card id.",
+          "fullName": "Card Id",
+          "functionType": "Action",
+          "name": "SetCardId",
+          "sentence": "Change the _PARAM0_ card id to _PARAM2_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlayingCard::PlayingCard::SetPropertyCardId"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GetArgumentAsNumber(\"CardId\")"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "PlayingCard::PlayingCard",
+              "type": "behavior"
+            },
+            {
+              "description": "Card id",
+              "name": "CardId",
+              "type": "expression"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Check the card color.",
+          "fullName": "Card color",
+          "functionType": "Condition",
+          "name": "CheckColor",
+          "sentence": "_PARAM0_ card color is _PARAM2_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "False"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::And"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "StrEqual"
+                          },
+                          "parameters": [
+                            "GetArgumentAsString(\"CardColor\")",
+                            "=",
+                            "\"Red\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Egal"
+                          },
+                          "parameters": [
+                            "Object.Behavior::PropertyCardId()",
+                            "<=",
+                            "25"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::And"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "StrEqual"
+                          },
+                          "parameters": [
+                            "GetArgumentAsString(\"CardColor\")",
+                            "=",
+                            "\"Black\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Egal"
+                          },
+                          "parameters": [
+                            "Object.Behavior::PropertyCardId()",
+                            ">",
+                            "25"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "PlayingCard::PlayingCard",
+              "type": "behavior"
+            },
+            {
+              "description": "Card color",
+              "name": "CardColor",
+              "type": "string"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "The card suite id",
+          "fullName": "Card suite id",
+          "functionType": "Expression",
+          "name": "SuiteId",
+          "sentence": "_PARAM0_ card suite id is _PARAM2_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnNumber"
+                  },
+                  "parameters": [
+                    "floor(Object.Behavior::PropertyCardId() / 13)"
+                  ]
+                }
+              ]
+            }
+          ],
+          "expressionType": {
+            "type": "expression"
+          },
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "PlayingCard::PlayingCard",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Check the card suite id.",
+          "fullName": "Card suite id",
+          "functionType": "Condition",
+          "name": "CheckSuiteId",
+          "sentence": "_PARAM0_ card suite id is _PARAM2_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "False"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Egal"
+                  },
+                  "parameters": [
+                    "GetArgumentAsNumber(\"CardSuiteId\")",
+                    "=",
+                    "floor(Object.Behavior::PropertyCardId() / 13)"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "PlayingCard::PlayingCard",
+              "type": "behavior"
+            },
+            {
+              "description": "Card suite id",
+              "name": "CardSuiteId",
+              "type": "expression"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "The card id",
+          "fullName": "Card id",
+          "functionType": "Expression",
+          "name": "Id",
+          "sentence": "_PARAM0_ card value is _PARAM2_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnNumber"
+                  },
+                  "parameters": [
+                    "Object.Behavior::PropertyCardId()"
+                  ]
+                }
+              ]
+            }
+          ],
+          "expressionType": {
+            "type": "expression"
+          },
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "PlayingCard::PlayingCard",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "The card value",
+          "fullName": "Card value",
+          "functionType": "Expression",
+          "name": "Value",
+          "sentence": "_PARAM0_ card value is _PARAM2_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnNumber"
+                  },
+                  "parameters": [
+                    "mod(Object.Behavior::PropertyCardId(), 13)"
+                  ]
+                }
+              ]
+            }
+          ],
+          "expressionType": {
+            "type": "expression"
+          },
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "PlayingCard::PlayingCard",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Check the card value.",
+          "fullName": "Card value",
+          "functionType": "Condition",
+          "name": "CheckValue",
+          "sentence": "_PARAM0_ card value is _PARAM2_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "False"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Egal"
+                  },
+                  "parameters": [
+                    "GetArgumentAsNumber(\"CardValue\")",
+                    "=",
+                    "mod(Object.Behavior::PropertyCardId(), 13)"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "PlayingCard::PlayingCard",
+              "type": "behavior"
+            },
+            {
+              "description": "Card value",
+              "name": "CardValue",
+              "type": "expression"
+            }
+          ],
+          "objectGroups": []
+        }
+      ],
+      "propertyDescriptors": [
+        {
+          "value": "",
+          "type": "Number",
+          "label": "Card Id",
+          "description": "",
+          "group": "",
+          "extraInformation": [],
+          "hidden": true,
+          "name": "CardId"
+        }
+      ],
+      "sharedPropertyDescriptors": []
+    }
+  ],
+  "eventsBasedObjects": []
+}

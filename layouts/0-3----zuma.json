@@ -1,0 +1,5806 @@
+{
+  "b": 49,
+  "disableInputWhenNotFocused": true,
+  "mangledName": "_48_463_32_45_32_128056_32ZUMA",
+  "name": "0.3 - 🐸 ZUMA",
+  "r": 99,
+  "standardSortMethod": true,
+  "stopSoundsOnStartup": true,
+  "title": "",
+  "v": 84,
+  "uiSettings": {
+    "grid": false,
+    "gridType": "rectangular",
+    "gridWidth": 16,
+    "gridHeight": 28,
+    "gridOffsetX": 0,
+    "gridOffsetY": 0,
+    "gridColor": 10401023,
+    "gridAlpha": 0.8,
+    "snap": false,
+    "zoomFactor": 0.21029243552589974,
+    "windowMask": false
+  },
+  "objectsGroups": [],
+  "variables": [
+    {
+      "folded": true,
+      "name": "ColorNames",
+      "type": "array",
+      "children": [
+        {
+          "type": "string",
+          "value": "Yellow"
+        },
+        {
+          "type": "string",
+          "value": "Green"
+        },
+        {
+          "type": "string",
+          "value": "Blue"
+        },
+        {
+          "type": "string",
+          "value": "Red"
+        },
+        {
+          "type": "string",
+          "value": "Purple"
+        },
+        {
+          "folded": true,
+          "type": "string",
+          "value": "Grey"
+        }
+      ]
+    },
+    {
+      "folded": true,
+      "name": "ColorValues",
+      "type": "array",
+      "children": [
+        {
+          "folded": true,
+          "type": "string",
+          "value": "242;209;67"
+        },
+        {
+          "folded": true,
+          "type": "string",
+          "value": "166;242;67"
+        },
+        {
+          "folded": true,
+          "type": "string",
+          "value": "67;201;242"
+        },
+        {
+          "folded": true,
+          "type": "string",
+          "value": "242;111;67"
+        },
+        {
+          "folded": true,
+          "type": "string",
+          "value": "173;67;242"
+        },
+        {
+          "folded": true,
+          "type": "string",
+          "value": "242;233;200"
+        }
+      ]
+    },
+    {
+      "folded": true,
+      "name": "colou",
+      "type": "boolean",
+      "value": false
+    }
+  ],
+  "instances": [
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 69,
+      "layer": "",
+      "name": "GutterPainter",
+      "persistentUuid": "f0753a74-8af3-4f34-8e31-ca589091383d",
+      "width": 67,
+      "x": 85,
+      "y": -104,
+      "zOrder": 91,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "BubbleClipboard",
+      "persistentUuid": "558430dc-2ac8-4bd3-87b8-de53fbb4e056",
+      "width": 0,
+      "x": -387,
+      "y": 11,
+      "zOrder": 96,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Score",
+      "persistentUuid": "676db6fe-999e-454a-a69c-e1f290b05ee0",
+      "width": 0,
+      "x": 24,
+      "y": -191,
+      "zOrder": 97,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 77,
+      "layer": "",
+      "name": "Countdown",
+      "persistentUuid": "60b40b4e-219c-41e6-9cd8-85997e02916d",
+      "width": 187,
+      "x": 747,
+      "y": 91,
+      "zOrder": 98,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 82,
+      "keepRatio": true,
+      "layer": "",
+      "name": "LevelSelectionBtn",
+      "persistentUuid": "731b854e-462a-4b1d-82aa-3b688e8e51a7",
+      "width": 153,
+      "x": 1179,
+      "y": -124,
+      "zOrder": 104,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 88,
+      "keepRatio": true,
+      "layer": "Layer UI",
+      "name": "btn_Back",
+      "persistentUuid": "706101a2-0265-4c1d-9020-1cf2de5ae932",
+      "width": 80,
+      "x": 22,
+      "y": 627,
+      "zOrder": 107,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 934,
+      "keepRatio": true,
+      "layer": "Layer BACKGROUND",
+      "name": "Grass8",
+      "persistentUuid": "b1d80adb-d8dd-4f7f-adda-d0ee8114c334",
+      "width": 1526,
+      "x": -119,
+      "y": -115,
+      "zOrder": 108,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 57,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Target",
+      "persistentUuid": "4d46cfc2-2a79-40da-b9fb-aca2649c5d50",
+      "width": 52,
+      "x": 987,
+      "y": -123,
+      "zOrder": 109,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "name",
+      "persistentUuid": "c9a9181e-7d5f-423e-a758-3ac1569236d5",
+      "width": 0,
+      "x": 658,
+      "y": -242,
+      "zOrder": 110,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 57,
+      "keepRatio": true,
+      "layer": "",
+      "name": "tempo",
+      "persistentUuid": "1f70f43f-c13c-4e15-aaf4-903225c8be55",
+      "width": 199,
+      "x": 740,
+      "y": 35,
+      "zOrder": 111,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "AVISO",
+      "persistentUuid": "5abcec5e-63da-4653-809b-822dd67b82f1",
+      "width": 0,
+      "x": -155,
+      "y": -356,
+      "zOrder": 112,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    }
+  ],
+  "objects": [
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "BoardBubble",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "BoardBubbleBehavior",
+          "type": "Smoothy::BoardBubbleBehavior"
+        },
+        {
+          "name": "SpeedPathMovement",
+          "type": "CurvedMovement::SpeedPathMovement",
+          "Rotation": false,
+          "RotationOffset": 0,
+          "Speed": 0,
+          "PathOriginX": 0,
+          "PathOriginY": 0,
+          "PathName": "",
+          "TargetedSpeed": 0,
+          "Acceleration": 0,
+          "DrawingElementIndex": 0,
+          "X": 0,
+          "Y": 0,
+          "PathAngle": 0,
+          "PathScale": 0,
+          "RepetitionCount": 0,
+          "ShouldLoop": false,
+          "DrawingPathOriginX": 0,
+          "DrawingPathOriginY": 0,
+          "DebugLineStrokeWidth": 0,
+          "PreviousSpeed": 0,
+          "CurrentLength": 0,
+          "IsLookingBack": false,
+          "Viewpoint": "Top-Down"
+        }
+      ],
+      "animations": [
+        {
+          "name": "Yellow",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Yellow16",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15,
+                    "y": 15
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 23.5,
+                        "y": 6.5
+                      },
+                      {
+                        "x": 28,
+                        "y": 15
+                      },
+                      {
+                        "x": 23.5,
+                        "y": 23.5
+                      },
+                      {
+                        "x": 15,
+                        "y": 28
+                      },
+                      {
+                        "x": 6.5,
+                        "y": 23.5
+                      },
+                      {
+                        "x": 2,
+                        "y": 15
+                      },
+                      {
+                        "x": 6.5,
+                        "y": 6.5
+                      },
+                      {
+                        "x": 15,
+                        "y": 2
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Green",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Green17",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15,
+                    "y": 15
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 23.5,
+                        "y": 6.5
+                      },
+                      {
+                        "x": 28,
+                        "y": 15
+                      },
+                      {
+                        "x": 23.5,
+                        "y": 23.5
+                      },
+                      {
+                        "x": 15,
+                        "y": 28
+                      },
+                      {
+                        "x": 6.5,
+                        "y": 23.5
+                      },
+                      {
+                        "x": 2,
+                        "y": 15
+                      },
+                      {
+                        "x": 6.5,
+                        "y": 6.5
+                      },
+                      {
+                        "x": 15,
+                        "y": 2
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Blue",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Blue13",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15,
+                    "y": 15
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 23.5,
+                        "y": 6.5
+                      },
+                      {
+                        "x": 28,
+                        "y": 15
+                      },
+                      {
+                        "x": 23.5,
+                        "y": 23.5
+                      },
+                      {
+                        "x": 15,
+                        "y": 28
+                      },
+                      {
+                        "x": 6.5,
+                        "y": 23.5
+                      },
+                      {
+                        "x": 2,
+                        "y": 15
+                      },
+                      {
+                        "x": 6.5,
+                        "y": 6.5
+                      },
+                      {
+                        "x": 15,
+                        "y": 2
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Red",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Red23",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15,
+                    "y": 15
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 23.5,
+                        "y": 6.5
+                      },
+                      {
+                        "x": 28,
+                        "y": 15
+                      },
+                      {
+                        "x": 23.5,
+                        "y": 23.5
+                      },
+                      {
+                        "x": 15,
+                        "y": 28
+                      },
+                      {
+                        "x": 6.5,
+                        "y": 23.5
+                      },
+                      {
+                        "x": 2,
+                        "y": 15
+                      },
+                      {
+                        "x": 6.5,
+                        "y": 6.5
+                      },
+                      {
+                        "x": 15,
+                        "y": 2
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Purple",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Purple16",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15,
+                    "y": 15
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 23.5,
+                        "y": 6.5
+                      },
+                      {
+                        "x": 28,
+                        "y": 15
+                      },
+                      {
+                        "x": 23.5,
+                        "y": 23.5
+                      },
+                      {
+                        "x": 15,
+                        "y": 28
+                      },
+                      {
+                        "x": 6.5,
+                        "y": 23.5
+                      },
+                      {
+                        "x": 2,
+                        "y": 15
+                      },
+                      {
+                        "x": 6.5,
+                        "y": 6.5
+                      },
+                      {
+                        "x": 15,
+                        "y": 2
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Grey",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Grey",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15,
+                    "y": 15
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "Spawner",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "ObjectStack",
+          "type": "ObjectStack::ObjectStack"
+        },
+        {
+          "name": "SpeedPathMovement",
+          "type": "CurvedMovement::SpeedPathMovement",
+          "Rotation": true,
+          "RotationOffset": 0,
+          "Speed": 0,
+          "PathOriginX": 0,
+          "PathOriginY": 0,
+          "PathName": "",
+          "TargetedSpeed": 0,
+          "Acceleration": 0,
+          "DrawingElementIndex": 0,
+          "X": 0,
+          "Y": 0,
+          "PathAngle": 0,
+          "PathScale": 0,
+          "RepetitionCount": 0,
+          "ShouldLoop": false,
+          "DrawingPathOriginX": 0,
+          "DrawingPathOriginY": 0,
+          "DebugLineStrokeWidth": 0,
+          "PreviousSpeed": 0,
+          "CurrentLength": 0,
+          "IsLookingBack": false,
+          "Viewpoint": "Top-Down"
+        },
+        {
+          "name": "SpwanerBehavior",
+          "type": "Smoothy::SpwanerBehavior",
+          "ObjectStack": "ObjectStack",
+          "ColorCount": 4
+        }
+      ],
+      "animations": [
+        {
+          "name": "Green",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Green3",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15,
+                    "y": 15
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Yellow",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Yellow2",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15,
+                    "y": 15
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Blue",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Blue6",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15,
+                    "y": 15
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Purple",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Purple2",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15,
+                    "y": 15
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Red",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Red2",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15,
+                    "y": 15
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "AimingBubble",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "FireBullet",
+          "type": "FireBullet::FireBullet",
+          "FireCooldown": 0.35,
+          "HasJustFired": false
+        }
+      ],
+      "animations": [
+        {
+          "name": "Blue",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Blue2",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15,
+                    "y": 15
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Yellow",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Yellow3",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15,
+                    "y": 15
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Green",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Green4",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15,
+                    "y": 15
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Purple",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Purple3",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15,
+                    "y": 15
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Red",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Red3",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15,
+                    "y": 15
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Grey",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Grey2",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15,
+                    "y": 15
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "MovingBubble",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "DestroyOutside",
+          "type": "DestroyOutsideBehavior::DestroyOutside",
+          "extraBorder": 32
+        }
+      ],
+      "animations": [
+        {
+          "name": "Purple",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Purple4",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15,
+                    "y": 15
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 25,
+                        "y": 5
+                      },
+                      {
+                        "x": 30,
+                        "y": 15
+                      },
+                      {
+                        "x": 25,
+                        "y": 25
+                      },
+                      {
+                        "x": 15,
+                        "y": 30
+                      },
+                      {
+                        "x": 5,
+                        "y": 25
+                      },
+                      {
+                        "x": 0,
+                        "y": 15
+                      },
+                      {
+                        "x": 5,
+                        "y": 5
+                      },
+                      {
+                        "x": 15,
+                        "y": 0
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Yellow",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Yellow4",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15,
+                    "y": 15
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 25,
+                        "y": 5
+                      },
+                      {
+                        "x": 30,
+                        "y": 15
+                      },
+                      {
+                        "x": 25,
+                        "y": 25
+                      },
+                      {
+                        "x": 15,
+                        "y": 30
+                      },
+                      {
+                        "x": 5,
+                        "y": 25
+                      },
+                      {
+                        "x": 0,
+                        "y": 15
+                      },
+                      {
+                        "x": 5,
+                        "y": 5
+                      },
+                      {
+                        "x": 15,
+                        "y": 0
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Blue",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Blue3",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15,
+                    "y": 15
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 25,
+                        "y": 5
+                      },
+                      {
+                        "x": 30,
+                        "y": 15
+                      },
+                      {
+                        "x": 25,
+                        "y": 25
+                      },
+                      {
+                        "x": 15,
+                        "y": 30
+                      },
+                      {
+                        "x": 5,
+                        "y": 25
+                      },
+                      {
+                        "x": 0,
+                        "y": 15
+                      },
+                      {
+                        "x": 5,
+                        "y": 5
+                      },
+                      {
+                        "x": 15,
+                        "y": 0
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Green",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Green5",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15,
+                    "y": 15
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 25,
+                        "y": 5
+                      },
+                      {
+                        "x": 30,
+                        "y": 15
+                      },
+                      {
+                        "x": 25,
+                        "y": 25
+                      },
+                      {
+                        "x": 15,
+                        "y": 30
+                      },
+                      {
+                        "x": 5,
+                        "y": 25
+                      },
+                      {
+                        "x": 0,
+                        "y": 15
+                      },
+                      {
+                        "x": 5,
+                        "y": 5
+                      },
+                      {
+                        "x": 15,
+                        "y": 0
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Red",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Red4",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15,
+                    "y": 15
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 25,
+                        "y": 5
+                      },
+                      {
+                        "x": 30,
+                        "y": 15
+                      },
+                      {
+                        "x": 25,
+                        "y": 25
+                      },
+                      {
+                        "x": 15,
+                        "y": 30
+                      },
+                      {
+                        "x": 5,
+                        "y": 25
+                      },
+                      {
+                        "x": 0,
+                        "y": 15
+                      },
+                      {
+                        "x": 5,
+                        "y": 5
+                      },
+                      {
+                        "x": 15,
+                        "y": 0
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Grey",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Grey3",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15,
+                    "y": 15
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "InsertedBubble",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "InsertedBubble",
+          "type": "Smoothy::InsertedBubbleBehavior",
+          "SpeedPathMovement": "SpeedPathMovement"
+        },
+        {
+          "name": "SpeedPathMovement",
+          "type": "CurvedMovement::SpeedPathMovement",
+          "Rotation": true,
+          "RotationOffset": 0,
+          "Speed": 0,
+          "PathOriginX": 0,
+          "PathOriginY": 0,
+          "PathName": "",
+          "TargetedSpeed": 0,
+          "Acceleration": 0,
+          "DrawingElementIndex": 0,
+          "X": 0,
+          "Y": 0,
+          "PathAngle": 0,
+          "PathScale": 0,
+          "RepetitionCount": 0,
+          "ShouldLoop": false,
+          "DrawingPathOriginX": 0,
+          "DrawingPathOriginY": 0,
+          "DebugLineStrokeWidth": 0,
+          "PreviousSpeed": 0,
+          "CurrentLength": 0,
+          "IsLookingBack": false,
+          "Viewpoint": "Top-Down"
+        }
+      ],
+      "animations": [
+        {
+          "name": "Red",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Red21",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15,
+                    "y": 15
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Yellow",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Yellow5",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15,
+                    "y": 15
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Blue",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Blue4",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15,
+                    "y": 15
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Green",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Green6",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15,
+                    "y": 15
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Purple",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Purple6",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15,
+                    "y": 15
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Grey",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Grey4",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15,
+                    "y": 15
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "PreviewBubble",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "ButtonFSM",
+          "type": "ButtonStates::ButtonFSM",
+          "ShouldCheckHovering": true,
+          "State": "Idle",
+          "TouchId": 0,
+          "TouchIsInside": false,
+          "MouseIsInside": false,
+          "Index": 0
+        },
+        {
+          "name": "InsertedBubble",
+          "type": "Smoothy::InsertedBubbleBehavior",
+          "SpeedPathMovement": "SpeedPathMovement"
+        },
+        {
+          "name": "SpeedPathMovement",
+          "type": "CurvedMovement::SpeedPathMovement",
+          "Rotation": true,
+          "RotationOffset": 0,
+          "Speed": 0,
+          "PathOriginX": 0,
+          "PathOriginY": 0,
+          "PathName": "",
+          "TargetedSpeed": 0,
+          "Acceleration": 0,
+          "DrawingElementIndex": 0,
+          "X": 0,
+          "Y": 0,
+          "PathAngle": 0,
+          "PathScale": 0,
+          "RepetitionCount": 0,
+          "ShouldLoop": false,
+          "DrawingPathOriginX": 0,
+          "DrawingPathOriginY": 0,
+          "DebugLineStrokeWidth": 0,
+          "PreviousSpeed": 0,
+          "CurrentLength": 0,
+          "IsLookingBack": false,
+          "Viewpoint": "Top-Down"
+        }
+      ],
+      "animations": [
+        {
+          "name": "Grey",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Grey5",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15,
+                    "y": 15
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Red",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Red5",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15,
+                    "y": 15
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Yellow",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Yellow6",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15,
+                    "y": 15
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Blue",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Blue5",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15,
+                    "y": 15
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Green",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Green7",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15,
+                    "y": 15
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Purple",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Purple5",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15,
+                    "y": 15
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "FROG",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "Frog_Idle_7",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Frog_Idle_8",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 82,
+                    "y": 50
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 87,
+                    "y": 50
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Launcher",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Launcher",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 82,
+                    "y": 50
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 87,
+                    "y": 50
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Launcher3",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 82,
+                    "y": 50
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 87,
+                    "y": 50
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "Gutter",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "GutterBehavior",
+          "type": "Smoothy::GutterBehavior",
+          "ObjectStack": "ObjectStack",
+          "FirstQueueHeadPosition": 0,
+          "NearDeathLengthRatio": 0.75,
+          "AccelerationDuration": 1,
+          "NearDeathZoneBeginningSpeed": 17.8,
+          "BeginningFillRatio": 0.8,
+          "SafeZoneEndLengthRatio": 0
+        },
+        {
+          "name": "ObjectStack",
+          "type": "ObjectStack::ObjectStack"
+        }
+      ],
+      "animations": [
+        {
+          "name": "NewObject",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "NewObject",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "BubbleQueue",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "BubbleQueueBehavior",
+          "type": "Smoothy::BubbleQueueBehavior",
+          "TailState": "Idle",
+          "HeadState": "Idle",
+          "TailComboLevel": 0,
+          "HeadComboLevel": 0,
+          "HitStopDuration": 0.1,
+          "RewindDelay": 0.3,
+          "HitStopAfterComboDuration": 0.3
+        },
+        {
+          "name": "ObjectStack",
+          "type": "ObjectStack::ObjectStack"
+        }
+      ],
+      "animations": [
+        {
+          "name": "NewObject",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "NewObject2",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "name": "GutterPainter",
+      "type": "PrimitiveDrawing::Drawer",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "fillOpacity": 255,
+      "outlineSize": 32,
+      "outlineOpacity": 255,
+      "absoluteCoordinates": true,
+      "clearBetweenFrames": false,
+      "antialiasing": "none",
+      "fillColor": {
+        "r": 54,
+        "g": 46,
+        "b": 27
+      },
+      "outlineColor": {
+        "r": 54,
+        "g": 46,
+        "b": 27
+      }
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "BubbleClipboard",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "ObjectStack",
+          "type": "ObjectStack::ObjectStack"
+        }
+      ],
+      "animations": [
+        {
+          "name": "NewSprite",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "NewSprite",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "additive": false,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": true,
+      "emitterAngleA": 0,
+      "emitterAngleB": 360,
+      "emitterForceMax": 200,
+      "emitterForceMin": 50,
+      "flow": 1280,
+      "jumpForwardInTimeOnCreation": 0,
+      "maxParticleNb": 64,
+      "name": "BubbleExplosion",
+      "particleAlpha1": 204,
+      "particleAlpha2": 0,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 51,
+      "particleBlue2": 0,
+      "particleColor1": "255;51;51",
+      "particleColor2": "255;255;0",
+      "particleGravityX": 0,
+      "particleGravityY": 0,
+      "particleGreen1": 51,
+      "particleGreen2": 255,
+      "particleLifeTimeMax": 0.2,
+      "particleLifeTimeMin": 0.1,
+      "particleRed1": 255,
+      "particleRed2": 255,
+      "particleSize1": 25,
+      "particleSize2": 100,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "rendererParam1": 8,
+      "rendererParam2": 1,
+      "rendererType": "Point",
+      "tank": 64,
+      "textureParticleName": "",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 8,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "Score",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "0000",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 20,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "0000",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 20,
+        "color": "255;255;255"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": true,
+      "italic": false,
+      "name": "Countdown",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "1:00",
+      "font": "PressStart2P-Regular.ttf",
+      "textAlignment": "left",
+      "characterSize": 20,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "content": {
+        "bold": true,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "1:00",
+        "font": "PressStart2P-Regular.ttf",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 20,
+        "color": "255;255;255"
+      }
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "Hole",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "assets\\Hole",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets\\Hole5",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 30,
+                    "y": 40
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 30,
+                    "y": 43
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "b44dba91245ff1ac84a7b450e078194f19321d135fd8a67cd19bc9cb3403fba5",
+      "name": "GreenButton",
+      "type": "PanelSpriteButton::PanelSpriteButton",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "LeftPadding": 16,
+        "RightPadding": 16,
+        "PressedLabelOffsetY": 10,
+        "BottomPadding": 32,
+        "TopPadding": 16,
+        "HoveredFadeOutDuration": 0.25
+      },
+      "childrenContent": {
+        "Hovered": {
+          "bottomMargin": 32,
+          "height": 106,
+          "leftMargin": 16,
+          "rightMargin": 16,
+          "texture": "Green Button_Hovered.png",
+          "tiled": true,
+          "topMargin": 16,
+          "width": 256
+        },
+        "Idle": {
+          "bottomMargin": 32,
+          "height": 106,
+          "leftMargin": 16,
+          "rightMargin": 16,
+          "texture": "Green Button_Idle.png",
+          "tiled": true,
+          "topMargin": 16,
+          "width": 256
+        },
+        "Label": {
+          "bold": false,
+          "italic": false,
+          "smoothed": true,
+          "underlined": false,
+          "string": "NEXT",
+          "font": "",
+          "textAlignment": "center",
+          "characterSize": 20,
+          "color": {
+            "b": 29,
+            "g": 99,
+            "r": 62
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "NEXT",
+            "font": "",
+            "textAlignment": "center",
+            "verticalTextAlignment": "top",
+            "characterSize": 20,
+            "color": "62;99;29"
+          }
+        },
+        "Pressed": {
+          "bottomMargin": 16,
+          "height": 106,
+          "leftMargin": 16,
+          "rightMargin": 16,
+          "texture": "Green Button_Pressed.png",
+          "tiled": true,
+          "topMargin": 32,
+          "width": 256
+        }
+      }
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "LevelSelectionBtn",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Green Button_Hovered.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "9a61efbfbeb164faa3edd06e1e165db92082da103cebbffd3955bbc1ad670074",
+      "name": "btn_Back",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.025,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Back.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 114,
+                        "y": 0
+                      },
+                      {
+                        "x": 114,
+                        "y": 125
+                      },
+                      {
+                        "x": 0,
+                        "y": 125
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "5f90c586d878e13fecd2a3cac659e5c53a80f5f54f2473bd61d81aef212f4258",
+      "height": 128,
+      "name": "Grass8",
+      "texture": "tiled_Grass8.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 128,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "c93d542da744bc664be69a9cd5f9fec633c3155c5d05a6c88ae5f76213fe3ad8",
+      "name": "FrogTongue",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Sticker",
+          "type": "Sticker::Sticker",
+          "OnlyFollowPosition": true,
+          "IsDestroyedWithParent": false
+        }
+      ],
+      "animations": [
+        {
+          "name": "Attack",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.025,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Frog Tongue_Attack_7.png",
+                  "points": [
+                    {
+                      "name": "cola",
+                      "x": 38,
+                      "y": 12
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 14.5,
+                    "y": 12
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 14.5,
+                    "y": 12
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 14,
+                        "y": 9
+                      },
+                      {
+                        "x": 38.5,
+                        "y": 8
+                      },
+                      {
+                        "x": 38.5,
+                        "y": 16.5
+                      },
+                      {
+                        "x": 14,
+                        "y": 15
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Frog Tongue_Attack_2.png",
+                  "points": [
+                    {
+                      "name": "cola",
+                      "x": 38.5,
+                      "y": 12
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 14.5,
+                    "y": 12
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 14.5,
+                    "y": 12
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 14,
+                        "y": 9
+                      },
+                      {
+                        "x": 39,
+                        "y": 8
+                      },
+                      {
+                        "x": 39.5,
+                        "y": 17
+                      },
+                      {
+                        "x": 14,
+                        "y": 15
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Frog Tongue_Attack_1.png",
+                  "points": [
+                    {
+                      "name": "cola",
+                      "x": 68,
+                      "y": 12
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 14.5,
+                    "y": 12
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 14.5,
+                    "y": 12
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 14,
+                        "y": 9
+                      },
+                      {
+                        "x": 68.5,
+                        "y": 9
+                      },
+                      {
+                        "x": 68.5,
+                        "y": 16.5
+                      },
+                      {
+                        "x": 14,
+                        "y": 15
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Frog Tongue_Attack_3.png",
+                  "points": [
+                    {
+                      "name": "cola",
+                      "x": 71.5,
+                      "y": 12
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 14.5,
+                    "y": 12
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 14.5,
+                    "y": 12
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 14,
+                        "y": 9
+                      },
+                      {
+                        "x": 72,
+                        "y": 9
+                      },
+                      {
+                        "x": 72,
+                        "y": 15
+                      },
+                      {
+                        "x": 14,
+                        "y": 15
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Frog Tongue_Attack_6.png",
+                  "points": [
+                    {
+                      "name": "cola",
+                      "x": 72,
+                      "y": 12
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 14.5,
+                    "y": 12
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 14.5,
+                    "y": 12
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 14,
+                        "y": 9
+                      },
+                      {
+                        "x": 72,
+                        "y": 9
+                      },
+                      {
+                        "x": 72,
+                        "y": 15.5
+                      },
+                      {
+                        "x": 14,
+                        "y": 15
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Frog Tongue_Attack_8.png",
+                  "points": [
+                    {
+                      "name": "cola",
+                      "x": 68,
+                      "y": 11.5
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 14,
+                    "y": 12
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 14.5,
+                    "y": 12
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 14,
+                        "y": 9
+                      },
+                      {
+                        "x": 68.5,
+                        "y": 9
+                      },
+                      {
+                        "x": 68.5,
+                        "y": 15.5
+                      },
+                      {
+                        "x": 14,
+                        "y": 15
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Frog Tongue_Attack_7.png",
+                  "points": [
+                    {
+                      "name": "cola",
+                      "x": 38,
+                      "y": 12
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 14,
+                    "y": 12
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 14.5,
+                    "y": 12
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 14,
+                        "y": 9
+                      },
+                      {
+                        "x": 38.5,
+                        "y": 8
+                      },
+                      {
+                        "x": 38.5,
+                        "y": 16.5
+                      },
+                      {
+                        "x": 14,
+                        "y": 15
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Frog Tongue_Attack_7.png",
+                  "points": [
+                    {
+                      "name": "cola",
+                      "x": 37.5,
+                      "y": 12
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 14,
+                    "y": 12
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 14.5,
+                    "y": 12
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 14,
+                        "y": 9
+                      },
+                      {
+                        "x": 38.5,
+                        "y": 8
+                      },
+                      {
+                        "x": 38.5,
+                        "y": 16.5
+                      },
+                      {
+                        "x": 14,
+                        "y": 15
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "inside",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "1173474f4bc1ee8c2f98853b81ced980ec66bd3dbea50866f0fe7a33b29eb493",
+      "name": "Target",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "ButtonFSM",
+          "type": "ButtonStates::ButtonFSM",
+          "ShouldCheckHovering": true,
+          "State": "Idle",
+          "TouchId": 0,
+          "TouchIsInside": false,
+          "MouseIsInside": false,
+          "Index": 2.0247e-320
+        },
+        {
+          "name": "cursor",
+          "type": "MouseHelper::cursor"
+        }
+      ],
+      "animations": [
+        {
+          "name": "Idle",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.025,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Target_Idle.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 64
+                      },
+                      {
+                        "x": 0,
+                        "y": 64
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Outline",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.025,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Target_Outline.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 64
+                      },
+                      {
+                        "x": 0,
+                        "y": 64
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "c8555b45320a7030ce17029b1af5be2ea5c784f78e891928e0c8fd800f9ee863",
+      "name": "EmoteCircle",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.025,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Emote Circle.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 16,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 16,
+                    "y": 16
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 7,
+                        "y": 13
+                      },
+                      {
+                        "x": 12,
+                        "y": 7.5
+                      },
+                      {
+                        "x": 20,
+                        "y": 7.5
+                      },
+                      {
+                        "x": 25,
+                        "y": 12.5
+                      },
+                      {
+                        "x": 25,
+                        "y": 20
+                      },
+                      {
+                        "x": 20,
+                        "y": 25.5
+                      },
+                      {
+                        "x": 13,
+                        "y": 25.5
+                      },
+                      {
+                        "x": 7,
+                        "y": 20.5
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "name",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "name",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 20,
+      "color": {
+        "b": 253,
+        "g": 253,
+        "r": 253
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "name",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 20,
+        "color": "253;253;253"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": true,
+      "italic": false,
+      "name": "tempo",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "Tempo",
+      "font": "mononoki-Regular.ttf",
+      "textAlignment": "left",
+      "characterSize": 30,
+      "color": {
+        "b": 253,
+        "g": 253,
+        "r": 253
+      },
+      "content": {
+        "bold": true,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Tempo",
+        "font": "mononoki-Regular.ttf",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 30,
+        "color": "253;253;253"
+      }
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "bdbd50dd87eb45c7f04fef6fa3dee5fec3a9ce98b250134c67d622b4750e5148",
+      "name": "WallSideMidRight",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.025,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Wall Side Mid Right.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 1.5,
+                    "y": 7.5
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 2.5,
+                    "y": 7.5
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 5,
+                        "y": 0
+                      },
+                      {
+                        "x": 5,
+                        "y": 16
+                      },
+                      {
+                        "x": 0,
+                        "y": 16
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "AVISO",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "BOARD BUBBLE É O OBJETO PARA MUDAR OS SPRITES ",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 60,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "BOARD BUBBLE É O OBJETO PARA MUDAR OS SPRITES ",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 60,
+        "color": "0;0;0"
+      }
+    }
+  ],
+  "objectsFolderStructure": {
+    "folderName": "__ROOT",
+    "children": [
+      {
+        "folderName": "BOLA",
+        "children": [
+          {
+            "objectName": "PreviewBubble"
+          },
+          {
+            "objectName": "MovingBubble"
+          },
+          {
+            "objectName": "Spawner"
+          },
+          {
+            "objectName": "InsertedBubble"
+          },
+          {
+            "objectName": "AimingBubble"
+          },
+          {
+            "objectName": "BoardBubble"
+          }
+        ]
+      },
+      {
+        "folderName": "OUTROS",
+        "children": [
+          {
+            "objectName": "FROG"
+          },
+          {
+            "objectName": "Hole"
+          },
+          {
+            "objectName": "Countdown"
+          },
+          {
+            "objectName": "Score"
+          },
+          {
+            "objectName": "BubbleExplosion"
+          },
+          {
+            "objectName": "BubbleClipboard"
+          },
+          {
+            "objectName": "GutterPainter"
+          },
+          {
+            "objectName": "BubbleQueue"
+          },
+          {
+            "objectName": "Gutter"
+          }
+        ]
+      },
+      {
+        "folderName": "layer transição win",
+        "children": [
+          {
+            "objectName": "LevelSelectionBtn"
+          }
+        ]
+      },
+      {
+        "objectName": "GreenButton"
+      },
+      {
+        "objectName": "btn_Back"
+      },
+      {
+        "folderName": "BACKGROUND",
+        "children": [
+          {
+            "objectName": "Grass8"
+          }
+        ]
+      },
+      {
+        "objectName": "FrogTongue"
+      },
+      {
+        "objectName": "AVISO"
+      },
+      {
+        "objectName": "Target"
+      },
+      {
+        "objectName": "EmoteCircle"
+      },
+      {
+        "objectName": "name"
+      },
+      {
+        "objectName": "tempo"
+      },
+      {
+        "objectName": "WallSideMidRight"
+      }
+    ]
+  },
+  "events": [
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "\nObjects on the board:\n- BoardBubble are bubbles that move on the gutter.\n- BubbleQueue contain BoardBubble that are touching one to another.\n- Gutter contain BubbleQueue\n- Spawner create new BoardBubble in the gutter.\n\nObjects for player actions:\n- AimingBubble rotates according to how the player is aiming.\n- PreviewBubble shows the next color.\n- InsertedBubble handle the insertion animation.\n\nA big part of the events is inside the Smoothy extension.\nMost of the objects have dedicated behaviors:\n- BoardBubble animate explosions.\n- BubbleQueueBehavior contains bubbles bonded to each other. Each end of the queue has a FSM for the combo movement.\n- GutterBehavior contains bubbles queues and push the queue at the beginning of the gutter.\n- SpawnerBehavior generate bubbles to add in its gutter.\n- InsertedBubbleBehavior animates bubble insertions by pushing leading bubbles from the same queue.\n\nThe \"Curved movement\" extension is used to move bubbles on a path.\nThe \"Object stack\" extension is used to keep track of the bubbles order.\n\n"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 194,
+        "g": 227,
+        "r": 80,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "\"CHANGE THE SCENE VARIABLE COUNTDOWN: SET TO --> É O TEMPO DE DURAÇÃO DO JOGO\""
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "DepartScene"
+          },
+          "parameters": [
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "ModVarSceneTxt"
+          },
+          "parameters": [
+            "GameState",
+            "=",
+            "\"Playing\""
+          ]
+        },
+        {
+          "type": {
+            "value": "ModVarScene"
+          },
+          "parameters": [
+            "Countdown",
+            "=",
+            "1*60"
+          ]
+        },
+        {
+          "type": {
+            "value": "Smoothy::CreateLevel"
+          },
+          "parameters": [
+            "",
+            "GlobalVariable(Level)",
+            "FROG",
+            "Gutter",
+            "GutterBehavior",
+            "ObjectStack",
+            "BubbleQueue",
+            "GutterPainter",
+            "Hole",
+            "Spawner",
+            "SpwanerBehavior",
+            "ObjectStack",
+            "SpeedPathMovement",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "Create"
+          },
+          "parameters": [
+            "StartLocation",
+            "PreviewBubble",
+            "FROG.X()",
+            "FROG.Y()",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "Create"
+          },
+          "parameters": [
+            "StartLocation",
+            "FrogTongue",
+            "FROG.X()",
+            "FROG.Y()",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "Create"
+          },
+          "parameters": [
+            "StartLocation",
+            "EmoteCircle",
+            "FrogTongue.PointX(\"cola\")",
+            "FrogTongue.PointY(\"cola\")",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+          },
+          "parameters": [
+            "PreviewBubble",
+            "Animation",
+            "=",
+            "VariableString(ColorNames[RandomInRange(0, Spawner.SpwanerBehavior::ColorCount() - 1)])"
+          ]
+        },
+        {
+          "type": {
+            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+          },
+          "parameters": [
+            "AimingBubble",
+            "Animation",
+            "=",
+            "VariableString(ColorNames[RandomInRange(0, Spawner.SpwanerBehavior::ColorCount() - 1)])"
+          ]
+        },
+        {
+          "type": {
+            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+          },
+          "parameters": [
+            "FrogTongue",
+            "Animation",
+            "=",
+            "\"inside\""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetAdaptGameResolutionAtRuntime"
+          },
+          "parameters": [
+            "",
+            "yes"
+          ]
+        },
+        {
+          "type": {
+            "value": "Cache"
+          },
+          "parameters": [
+            "PreviewBubble"
+          ]
+        },
+        {
+          "type": {
+            "value": "ZoomCamera"
+          },
+          "parameters": [
+            "",
+            "1.4",
+            "",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "CentreCamera"
+          },
+          "parameters": [
+            "PreviewBubble",
+            "PreviewBubble",
+            "=",
+            "",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "OpacityCapability::OpacityBehavior::SetValue"
+          },
+          "parameters": [
+            "EmoteCircle",
+            "Opacity",
+            "=",
+            "5"
+          ]
+        },
+        {
+          "type": {
+            "value": "OpacityCapability::OpacityBehavior::SetValue"
+          },
+          "parameters": [
+            "Target",
+            "Opacity",
+            "=",
+            "5"
+          ]
+        }
+      ],
+      "events": [
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Debug",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "disabled": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ChangeTimeScale"
+                  },
+                  "parameters": [
+                    "",
+                    "0.25"
+                  ]
+                }
+              ]
+            },
+            {
+              "disabled": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ZoomCamera"
+                  },
+                  "parameters": [
+                    "",
+                    "0.9",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "disabled": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "AimingBubble",
+                    "Animation",
+                    "=",
+                    "\"Purple\""
+                  ]
+                }
+              ]
+            },
+            {
+              "disabled": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "FROG",
+                    "=",
+                    "50",
+                    "=",
+                    "150"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        }
+      ]
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "name": "Playing",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "VarSceneTxt"
+              },
+              "parameters": [
+                "GameState",
+                "=",
+                "\"Playing\""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Spawn bubbles",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Smoothy::SpwanerBehavior::CanSpawnBubble"
+                      },
+                      "parameters": [
+                        "Spawner",
+                        "SpwanerBehavior",
+                        "Gutter",
+                        "ObjectStack",
+                        "BubbleQueue",
+                        "ObjectStack",
+                        "BoardBubble",
+                        "SpeedPathMovement",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Smoothy::SpwanerBehavior::SpawnBubble"
+                      },
+                      "parameters": [
+                        "Spawner",
+                        "SpwanerBehavior",
+                        "Gutter",
+                        "GutterBehavior",
+                        "ObjectStack",
+                        "BubbleQueue",
+                        "ObjectStack",
+                        "BoardBubble",
+                        "SpeedPathMovement",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Smoothy::SpwanerBehavior::CanUnspawnBubble"
+                      },
+                      "parameters": [
+                        "Spawner",
+                        "SpwanerBehavior",
+                        "Gutter",
+                        "ObjectStack",
+                        "BubbleQueue",
+                        "ObjectStack",
+                        "BoardBubble",
+                        "SpeedPathMovement",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Smoothy::SpwanerBehavior::UnspawnBubble"
+                      },
+                      "parameters": [
+                        "Spawner",
+                        "SpwanerBehavior",
+                        "Gutter",
+                        "GutterBehavior",
+                        "ObjectStack",
+                        "BubbleQueue",
+                        "ObjectStack",
+                        "BoardBubble",
+                        "SpeedPathMovement",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Controls",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "FrogTongue",
+                        "BoardBubble",
+                        "",
+                        "",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "BoardBubble",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "BoardBubble",
+                        "EmoteCircle.X()",
+                        "EmoteCircle.Y()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "BoardBubble",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Wait"
+                      },
+                      "parameters": [
+                        ".01"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::PauseAnimation"
+                      },
+                      "parameters": [
+                        "FrogTongue",
+                        "Animation"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "FrogTongue",
+                        "Animation",
+                        "=",
+                        "\"inside\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "KeyReleased"
+                          },
+                          "parameters": [
+                            "",
+                            "Space"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "MouseButtonReleased"
+                          },
+                          "parameters": [
+                            "",
+                            "Left"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ButtonStates::ButtonFSM::IsClicked"
+                          },
+                          "parameters": [
+                            "Target",
+                            "ButtonFSM",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::IsReadyToShoot"
+                      },
+                      "parameters": [
+                        "AimingBubble",
+                        "FireBullet",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "ButtonStates::ButtonFSM::IsPressed"
+                      },
+                      "parameters": [
+                        "PreviewBubble",
+                        "ButtonFSM",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AjoutObjConcern"
+                      },
+                      "parameters": [
+                        "",
+                        "PreviewBubble"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::Fire"
+                      },
+                      "parameters": [
+                        "AimingBubble",
+                        "FireBullet",
+                        "AimingBubble.X()",
+                        "AimingBubble.Y()",
+                        "MovingBubble",
+                        "AngleBetweenPositions(FROG.X(), FROG.Y(), CursorX(), CursorY())",
+                        "690",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "MovingBubble",
+                        "Animation",
+                        "=",
+                        "AimingBubble.AnimationName()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "AimingBubble",
+                        "Animation",
+                        "=",
+                        "PreviewBubble.AnimationName()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "PreviewBubble",
+                        "Animation",
+                        "=",
+                        "VariableString(ColorNames[RandomInRange(0, Spawner.SpwanerBehavior::ColorCount() - 1)])"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "FrogTongue",
+                        "Animation",
+                        "=",
+                        "\"Attack\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::PlayAnimation"
+                      },
+                      "parameters": [
+                        "FrogTongue",
+                        "Animation"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Wait"
+                      },
+                      "parameters": [
+                        ".16"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::PauseAnimation"
+                      },
+                      "parameters": [
+                        "FrogTongue",
+                        "Animation"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "FrogTongue",
+                        "Animation",
+                        "=",
+                        "\"inside\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "MouseButtonReleased"
+                          },
+                          "parameters": [
+                            "",
+                            "Right"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "KeyReleased"
+                          },
+                          "parameters": [
+                            "",
+                            "LShift"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ButtonStates::ButtonFSM::IsClicked"
+                          },
+                          "parameters": [
+                            "PreviewBubble",
+                            "ButtonFSM",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ButtonStates::ButtonFSM::IsClicked"
+                          },
+                          "parameters": [
+                            "Target",
+                            "ButtonFSM",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AjoutObjConcern"
+                      },
+                      "parameters": [
+                        "",
+                        "PreviewBubble"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarSceneTxt"
+                      },
+                      "parameters": [
+                        "animationName",
+                        "=",
+                        "PreviewBubble.AnimationName()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "PreviewBubble",
+                        "Animation",
+                        "=",
+                        "AimingBubble.AnimationName()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "AimingBubble",
+                        "Animation",
+                        "=",
+                        "VariableString(animationName)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "FrogTongue",
+                        "Animation",
+                        "=",
+                        "\"Attack\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::PlayAnimation"
+                      },
+                      "parameters": [
+                        "FrogTongue",
+                        "Animation"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Wait"
+                      },
+                      "parameters": [
+                        ".16"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::PauseAnimation"
+                      },
+                      "parameters": [
+                        "FrogTongue",
+                        "Animation"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "FrogTongue",
+                        "Animation",
+                        "=",
+                        "\"inside\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MettreAutour"
+                      },
+                      "parameters": [
+                        "AimingBubble",
+                        "FROG",
+                        "30",
+                        "AngleBetweenPositions(FROG.X(), FROG.Y(), CursorX(), CursorY())"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Insert bubbles",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "MovingBubble",
+                        "BoardBubble",
+                        "",
+                        "",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AjoutHasard"
+                      },
+                      "parameters": [
+                        "",
+                        "BoardBubble"
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "ObjectStack::Contains"
+                          },
+                          "parameters": [
+                            "",
+                            "BubbleQueue",
+                            "ObjectStack",
+                            "BoardBubble",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ObjectStack::Contains"
+                          },
+                          "parameters": [
+                            "",
+                            "Gutter",
+                            "ObjectStack",
+                            "BubbleQueue",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "InsertedBubble",
+                            "Gutter.X()",
+                            "Gutter.Y()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "LinkedObjects::LinkObjects"
+                          },
+                          "parameters": [
+                            "",
+                            "InsertedBubble",
+                            "BoardBubble"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AjoutObjConcern"
+                          },
+                          "parameters": [
+                            "",
+                            "BoardBubble"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Smoothy::InsertedBubbleBehavior::Initialize"
+                          },
+                          "parameters": [
+                            "InsertedBubble",
+                            "InsertedBubble",
+                            "Gutter",
+                            "GutterBehavior",
+                            "BubbleQueue",
+                            "ObjectStack",
+                            "BoardBubble",
+                            "SpeedPathMovement",
+                            "MovingBubble",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "MovingBubble",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "Smoothy::InsertedBubbleBehavior::IsAnimationFinished"
+                      },
+                      "parameters": [
+                        "InsertedBubble",
+                        "InsertedBubble",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Smoothy::InsertedBubbleBehavior::PlayInsertion"
+                      },
+                      "parameters": [
+                        "InsertedBubble",
+                        "InsertedBubble",
+                        "Gutter",
+                        "ObjectStack",
+                        "BubbleQueue",
+                        "ObjectStack",
+                        "BoardBubble",
+                        "SpeedPathMovement",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Smoothy::InsertedBubbleBehavior::IsAnimationFinished"
+                      },
+                      "parameters": [
+                        "InsertedBubble",
+                        "InsertedBubble",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Smoothy::InsertedBubbleBehavior::CreateBubble"
+                      },
+                      "parameters": [
+                        "InsertedBubble",
+                        "InsertedBubble",
+                        "Gutter",
+                        "GutterBehavior",
+                        "ObjectStack",
+                        "BubbleQueue",
+                        "ObjectStack",
+                        "BoardBubble",
+                        "SpeedPathMovement",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Smoothy::GutterBehavior::Identifier"
+                          },
+                          "parameters": [
+                            "Gutter",
+                            "GutterBehavior",
+                            "=",
+                            "InsertedBubble.InsertedBubble::GutterIdentifier()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Smoothy::MatchBubbles"
+                          },
+                          "parameters": [
+                            "",
+                            "Gutter",
+                            "ObjectStack",
+                            "BubbleQueue",
+                            "BubbleQueueBehavior",
+                            "ObjectStack",
+                            "BoardBubble",
+                            "InsertedBubble.InsertedBubble::QueueIndex()",
+                            "InsertedBubble.InsertedBubble::BubbleIndex()",
+                            "BubbleClipboard",
+                            "ObjectStack",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Score",
+                            "+",
+                            "10 * PickedInstancesCount(BoardBubble)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Smoothy::BoardBubbleBehavior::Explode"
+                          },
+                          "parameters": [
+                            "BoardBubble",
+                            "BoardBubbleBehavior",
+                            "BubbleExplosion",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Queues collision",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "Gutter",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "queueIndex",
+                        "=",
+                        "Gutter.ObjectStack::Height() - 1"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "infiniteLoopWarning": true,
+                      "type": "BuiltinCommonInstructions::While",
+                      "whileConditions": [
+                        {
+                          "type": {
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "queueIndex",
+                            ">",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "conditions": [],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "Smoothy::IsQueueColliding"
+                              },
+                              "parameters": [
+                                "",
+                                "Gutter",
+                                "ObjectStack",
+                                "BubbleQueue",
+                                "ObjectStack",
+                                "BoardBubble",
+                                "BoardBubbleBehavior",
+                                "SpeedPathMovement",
+                                "Variable(queueIndex)",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetSceneVariableAsBoolean"
+                              },
+                              "parameters": [
+                                "areBubblesMatched",
+                                ""
+                              ]
+                            }
+                          ],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "Smoothy::MatchBubblesBetween"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Gutter",
+                                    "ObjectStack",
+                                    "BubbleQueue",
+                                    "BubbleQueueBehavior",
+                                    "ObjectStack",
+                                    "BoardBubble",
+                                    "Variable(queueIndex)",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetSceneVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "areBubblesMatched",
+                                    "True"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ModVarScene"
+                                  },
+                                  "parameters": [
+                                    "Score",
+                                    "+",
+                                    "10 * PickedInstancesCount(BoardBubble)"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ModVarScene"
+                                  },
+                                  "parameters": [
+                                    "Score",
+                                    "+",
+                                    "100 * BubbleQueue.BubbleQueueBehavior::HeadComboLevel()"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "Smoothy::BoardBubbleBehavior::Explode"
+                                  },
+                                  "parameters": [
+                                    "BoardBubble",
+                                    "BoardBubbleBehavior",
+                                    "BubbleExplosion",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "SceneVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "areBubblesMatched",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "Smoothy::MergeQueue"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Gutter",
+                                    "ObjectStack",
+                                    "BubbleQueue",
+                                    "BubbleQueueBehavior",
+                                    "ObjectStack",
+                                    "BoardBubble",
+                                    "BoardBubbleBehavior",
+                                    "SpeedPathMovement",
+                                    "Variable(queueIndex)",
+                                    "BubbleClipboard",
+                                    "ObjectStack",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ModVarScene"
+                                  },
+                                  "parameters": [
+                                    "queueIndex",
+                                    "-",
+                                    "1"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "queueIndex",
+                                "-",
+                                "1"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Combo",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Smoothy::GutterBehavior::UpdateMatchingQueue"
+                      },
+                      "parameters": [
+                        "Gutter",
+                        "GutterBehavior",
+                        "BubbleQueue",
+                        "BubbleQueueBehavior",
+                        "ObjectStack",
+                        "BoardBubble",
+                        "BoardBubbleBehavior",
+                        "SpeedPathMovement",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Move bubbles",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Smoothy::GutterBehavior::UpdateFirstHeadPosition"
+                      },
+                      "parameters": [
+                        "Gutter",
+                        "GutterBehavior",
+                        "BubbleQueue",
+                        "ObjectStack",
+                        "BoardBubble",
+                        "SpeedPathMovement",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Smoothy::BubbleQueueBehavior::SetBubblesSpeed"
+                      },
+                      "parameters": [
+                        "BubbleQueue",
+                        "BubbleQueueBehavior",
+                        "Gutter",
+                        "GutterBehavior",
+                        "ObjectStack",
+                        "BoardBubble",
+                        "SpeedPathMovement",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "UI",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "Score",
+                        "Text",
+                        "=",
+                        "VariableString(Score)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "Countdown",
+                        "=",
+                        "max(0, Variable(Countdown) - TimeDelta())"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "Countdown",
+                        "Text",
+                        "=",
+                        "TimeFormatter::SecondsToHHMMSS(Variable(Countdown))"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "TODO: Wait combo end before checking game over conditions."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "Countdown",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Smoothy::GutterBehavior::IsAnyBubbleReachHole"
+                      },
+                      "parameters": [
+                        "Gutter",
+                        "GutterBehavior",
+                        "BubbleQueue",
+                        "ObjectStack",
+                        "BoardBubble",
+                        "SpeedPathMovement",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarSceneTxt"
+                  },
+                  "parameters": [
+                    "GameState",
+                    "=",
+                    "\"GameOver\""
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "name": "Gameover",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 184,
+            "g": 115,
+            "r": 219,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Game over if red touches hole"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::Value"
+              },
+              "parameters": [
+                "name",
+                "Text",
+                "=",
+                "\"Red\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "Target",
+                "cursor",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "InsertedBubble"
+              ]
+            },
+            {
+              "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "BoardBubble"
+              ]
+            },
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "2"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "Score",
+                "=",
+                "Variable(Score)"
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"🐸---0.3.2 - Tente novamente\"",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "VarSceneTxt"
+              },
+              "parameters": [
+                "GameState",
+                "=",
+                "\"GameOver\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "CurvedMovement::SpeedPathMovement::AccelarateAt"
+              },
+              "parameters": [
+                "BoardBubble",
+                "SpeedPathMovement",
+                "2000",
+                "2000",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "InsertedBubble"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CurvedMovement::SpeedPathMovement::HasReachedTarget"
+                  },
+                  "parameters": [
+                    "BoardBubble",
+                    "SpeedPathMovement",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "BoardBubble"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 27,
+                "g": 2,
+                "r": 208,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Acho que aqui muda para a cena Win ou perder (faz mais sentido)\nInicialmente está na cena do \"Leaderboardddd\", mas vou  mudar para a cen que criei \"WIN\""
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 27,
+                "g": 2,
+                "r": 208,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "#TESTAR MUDANÇA"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Acho que nem precisa desse evento pq fiz o game over pelo contato da bola vermelha com o final da pista\nTirar isto vai resolver o caso do game over sem sentido"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ObjectStack::HasOnTop"
+                  },
+                  "parameters": [
+                    "",
+                    "Gutter",
+                    "ObjectStack",
+                    "BubbleQueue",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ObjectStack::HasOnTop"
+                  },
+                  "parameters": [
+                    "",
+                    "BubbleQueue",
+                    "ObjectStack",
+                    "BoardBubble",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CurvedMovement::SpeedPathMovement::HasReachedAnEnd"
+                  },
+                  "parameters": [
+                    "BoardBubble",
+                    "SpeedPathMovement",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "0.5"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "Score",
+                    "=",
+                    "Variable(Score)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"✴️✴️✴️ (LEVEL 4 -13) ✴️✴️✴️✴️\"",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": []
+    },
+    {
+      "colorB": 254,
+      "colorG": 19,
+      "colorR": 144,
+      "creationTime": 0,
+      "name": "Botao link LEVEL 1_4 ZUMA",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 42,
+            "g": 87,
+            "r": 139,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Esse botão \"Level 1 - "
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "GreenButton",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "MouseButtonReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "Left"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"0.4 - 👻 - PACMAN\"",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "name": "Win the game",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Se chegar a 0 o tempo",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 27,
+                "g": 2,
+                "r": 208,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "#TESTAR"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::And"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "Countdown",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"🐸---0.3.1 - Tela Win\"",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 254,
+      "colorG": 19,
+      "colorR": 144,
+      "creationTime": 0,
+      "name": "Botão",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "colorB": 254,
+          "colorG": 19,
+          "colorR": 144,
+          "creationTime": 0,
+          "name": "Voltar a cena anterior",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "btn_Back",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "MouseButtonReleased"
+                      },
+                      "parameters": [
+                        "",
+                        "Left"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Scene"
+                      },
+                      "parameters": [
+                        "",
+                        "\"🐶 3 - 🗺 LevelSelection\"",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "DepartScene"
+          },
+          "parameters": [
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "HideLayer"
+          },
+          "parameters": [
+            "",
+            "\"Layer transição win\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "cursor, alvo, escala, posicoes"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "value": "RotateTowardPosition"
+          },
+          "parameters": [
+            "FrogTongue",
+            "CursorX()",
+            "CursorY()",
+            "999",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "ScalableCapability::ScalableBehavior::SetValue"
+          },
+          "parameters": [
+            "FrogTongue",
+            "Scale",
+            "=",
+            "3.5"
+          ]
+        },
+        {
+          "type": {
+            "value": "ScalableCapability::ScalableBehavior::SetValue"
+          },
+          "parameters": [
+            "EmoteCircle",
+            "Scale",
+            "=",
+            ".5"
+          ]
+        },
+        {
+          "type": {
+            "value": "MettreXY"
+          },
+          "parameters": [
+            "EmoteCircle",
+            "=",
+            "FrogTongue.PointX(\"cola\")",
+            "=",
+            "FrogTongue.PointY(\"cola\")"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetBooleanVariable"
+          },
+          "parameters": [
+            "colou",
+            "True",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "RotateTowardPosition"
+          },
+          "parameters": [
+            "FROG",
+            "CursorX()",
+            "CursorY()",
+            "999",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Variavel que identifica a bola que chega ao fim da pista"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CollisionNP"
+          },
+          "parameters": [
+            "BoardBubble",
+            "Hole",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+          },
+          "parameters": [
+            "name",
+            "Text",
+            "=",
+            "BoardBubble.Animation::Name()"
+          ]
+        },
+        {
+          "type": {
+            "value": "Delete"
+          },
+          "parameters": [
+            "BoardBubble",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 201,
+        "g": 109,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": ""
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "DepartScene"
+          },
+          "parameters": [
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Cache"
+          },
+          "parameters": [
+            "AVISO"
+          ]
+        },
+        {
+          "type": {
+            "value": "Cache"
+          },
+          "parameters": [
+            "Score"
+          ]
+        },
+        {
+          "type": {
+            "value": "Cache"
+          },
+          "parameters": [
+            "name"
+          ]
+        },
+        {
+          "type": {
+            "value": "Cache"
+          },
+          "parameters": [
+            "BubbleClipboard"
+          ]
+        },
+        {
+          "type": {
+            "value": "Cache"
+          },
+          "parameters": [
+            "LevelSelectionBtn"
+          ]
+        }
+      ]
+    }
+  ],
+  "layers": [
+    {
+      "ambientLightColorB": 200,
+      "ambientLightColorG": 200,
+      "ambientLightColorR": 200,
+      "camera3DFarPlaneDistance": 10000,
+      "camera3DFieldOfView": 45,
+      "camera3DNearPlaneDistance": 3,
+      "cameraType": "",
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "isLocked": false,
+      "name": "Layer BACKGROUND",
+      "renderingType": "",
+      "visibility": true,
+      "cameras": [],
+      "effects": [
+        {
+          "effectType": "Scene3D::HemisphereLight",
+          "name": "3D Light",
+          "doubleParameters": {
+            "elevation": 45,
+            "intensity": 1,
+            "rotation": 0
+          },
+          "stringParameters": {
+            "groundColor": "64;64;64",
+            "skyColor": "255;255;255",
+            "top": "Y-"
+          },
+          "booleanParameters": {}
+        }
+      ]
+    },
+    {
+      "ambientLightColorB": 36,
+      "ambientLightColorG": 7379992,
+      "ambientLightColorR": 32,
+      "camera3DFarPlaneDistance": 10000,
+      "camera3DFieldOfView": 45,
+      "camera3DNearPlaneDistance": 0.1,
+      "cameraType": "perspective",
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "isLocked": false,
+      "name": "",
+      "renderingType": "",
+      "visibility": true,
+      "cameras": [
+        {
+          "defaultSize": true,
+          "defaultViewport": true,
+          "height": 0,
+          "viewportBottom": 1,
+          "viewportLeft": 0,
+          "viewportRight": 1,
+          "viewportTop": 0,
+          "width": 0
+        }
+      ],
+      "effects": []
+    },
+    {
+      "ambientLightColorB": 200,
+      "ambientLightColorG": 200,
+      "ambientLightColorR": 200,
+      "camera3DFarPlaneDistance": 10000,
+      "camera3DFieldOfView": 45,
+      "camera3DNearPlaneDistance": 3,
+      "cameraType": "",
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "isLocked": false,
+      "name": "Layer UI",
+      "renderingType": "",
+      "visibility": true,
+      "cameras": [],
+      "effects": [
+        {
+          "effectType": "Scene3D::HemisphereLight",
+          "name": "3D Light",
+          "doubleParameters": {
+            "elevation": 45,
+            "intensity": 1,
+            "rotation": 0
+          },
+          "stringParameters": {
+            "groundColor": "64;64;64",
+            "skyColor": "255;255;255",
+            "top": "Y-"
+          },
+          "booleanParameters": {}
+        }
+      ]
+    }
+  ],
+  "behaviorsSharedData": [
+    {
+      "name": "Animation",
+      "type": "AnimatableCapability::AnimatableBehavior"
+    },
+    {
+      "name": "BoardBubbleBehavior",
+      "type": "Smoothy::BoardBubbleBehavior"
+    },
+    {
+      "name": "BubbleQueueBehavior",
+      "type": "Smoothy::BubbleQueueBehavior"
+    },
+    {
+      "name": "ButtonFSM",
+      "type": "ButtonStates::ButtonFSM"
+    },
+    {
+      "name": "Effect",
+      "type": "EffectCapability::EffectBehavior"
+    },
+    {
+      "name": "FireBullet",
+      "type": "FireBullet::FireBullet"
+    },
+    {
+      "name": "Flippable",
+      "type": "FlippableCapability::FlippableBehavior"
+    },
+    {
+      "name": "GutterBehavior",
+      "type": "Smoothy::GutterBehavior"
+    },
+    {
+      "name": "InsertedBubble",
+      "type": "Smoothy::InsertedBubbleBehavior"
+    },
+    {
+      "name": "ObjectStack",
+      "type": "ObjectStack::ObjectStack"
+    },
+    {
+      "name": "Opacity",
+      "type": "OpacityCapability::OpacityBehavior"
+    },
+    {
+      "name": "Resizable",
+      "type": "ResizableCapability::ResizableBehavior"
+    },
+    {
+      "name": "Scale",
+      "type": "ScalableCapability::ScalableBehavior"
+    },
+    {
+      "name": "SpeedPathMovement",
+      "type": "CurvedMovement::SpeedPathMovement"
+    },
+    {
+      "name": "SpwanerBehavior",
+      "type": "Smoothy::SpwanerBehavior"
+    },
+    {
+      "name": "Sticker",
+      "type": "Sticker::Sticker"
+    },
+    {
+      "name": "Text",
+      "type": "TextContainerCapability::TextContainerBehavior"
+    },
+    {
+      "name": "cursor",
+      "type": "MouseHelper::cursor"
+    }
+  ]
+}

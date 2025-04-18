@@ -1,0 +1,1186 @@
+{
+  "associatedLayout": "Klondike",
+  "name": "SetupWithAnimation",
+  "events": [
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "This way of setuping the board is overly complicated because of the animation.\nThere is a simple setup in SetupNoAnimation."
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "The animation starts from a game won state: every card is in the 4 fondations.\nCards are going to the reserve from one fondation at a time."
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "name": "Back to Stock",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "VarSceneTxt"
+              },
+              "parameters": [
+                "AnimationState",
+                "=",
+                "\"Start\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarSceneTxt"
+              },
+              "parameters": [
+                "AnimationState",
+                "=",
+                "\"BackToStock\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "cardValue",
+                "=",
+                "13"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "fondationId",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "firstTime",
+                "True"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "VarSceneTxt"
+              },
+              "parameters": [
+                "AnimationState",
+                "=",
+                "\"BackToStock\""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "SceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "firstTime",
+                        "True"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::And"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "Timer"
+                          },
+                          "parameters": [
+                            "",
+                            "0.1",
+                            "\"NextCard\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "fondationId",
+                            "<",
+                            "4"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "cardValue",
+                            ">",
+                            "0"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"NextCard\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetSceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "firstTime",
+                    "False"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "cardValue",
+                    "-",
+                    "1"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjet"
+                      },
+                      "parameters": [
+                        "Fondation",
+                        "Index",
+                        "=",
+                        "Variable(fondationId)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ObjectStack::HasOnTop"
+                      },
+                      "parameters": [
+                        "",
+                        "Fondation",
+                        "ObjectStack",
+                        "Card",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+                      },
+                      "parameters": [
+                        "Card",
+                        "Tween",
+                        "\"BackToStock\"",
+                        "Stock.X()",
+                        "Stock.Y()",
+                        "\"easeInOutQuad\"",
+                        "1 + 0.3 * Variable(cardSuiteId)",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ThreeDFlip::ThreeDFlip::Flip"
+                      },
+                      "parameters": [
+                        "Card",
+                        "ThreeDFlip",
+                        "1000 + 300 * Variable(cardSuiteId)",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ObjectStack::ObjectStack::Remove"
+                      },
+                      "parameters": [
+                        "Fondation",
+                        "ObjectStack",
+                        "Card",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ObjectStack::ObjectStack::AddOnTop"
+                      },
+                      "parameters": [
+                        "Stock",
+                        "ObjectStack",
+                        "Card",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "Card",
+                        "=",
+                        "1 + (PlayingCard::MaxValue() + 1) * Variable(fondationId) +  Card.PlayingCard::Value()"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "The card is flipped by the Flip3D behavior.\nSort the cards on z-order the other way around.\nThe initial z-order is: 1 + (PlayingCard::MaxValue() + 1) * Variable(fondationId) +  Card.PlayingCard::Value()\nAdding: PlayingCard::MaxValue() - 2 * Card.PlayingCard::Value()\nMake it: 1 + (PlayingCard::MaxValue() + 1) * Variable(fondationId) +  PlayingCard::MaxValue() - Card.PlayingCard::Value()\nSo now, the king is at the lowest position and the ace at the highest one."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "FlippableCapability::FlippableBehavior::FlippedX"
+                  },
+                  "parameters": [
+                    "Card",
+                    "Flippable"
+                  ]
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "AnimatableCapability::AnimatableBehavior::Name"
+                  },
+                  "parameters": [
+                    "Card",
+                    "Animation",
+                    "=",
+                    "\"Back\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "Card",
+                    "Animation",
+                    "=",
+                    "\"Back\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "Card",
+                    "+",
+                    "PlayingCard::MaxValue() - 2 * Card.PlayingCard::Value()"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Wait a bit more between 2 fondations."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Timer"
+                  },
+                  "parameters": [
+                    "",
+                    "0.25",
+                    "\"NextCard\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "cardValue",
+                    "<=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "fondationId",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "cardValue",
+                    "=",
+                    "13"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Wait for the last card to reach its destination."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Timer"
+                  },
+                  "parameters": [
+                    "",
+                    "1.9",
+                    "\"NextCard\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarSceneTxt"
+                  },
+                  "parameters": [
+                    "AnimationState",
+                    "=",
+                    "\"PreSetupTableaux\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ObjectStack::ObjectStack::Shuffle"
+                  },
+                  "parameters": [
+                    "Stock",
+                    "ObjectStack",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "name": "Setup Tableaux",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "VarSceneTxt"
+              },
+              "parameters": [
+                "AnimationState",
+                "=",
+                "\"PreSetupTableaux\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarSceneTxt"
+              },
+              "parameters": [
+                "AnimationState",
+                "=",
+                "\"SetupTableaux\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "firstTableauIndex",
+                "=",
+                "6"
+              ]
+            },
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+              },
+              "parameters": [
+                "Card",
+                "Animation",
+                "=",
+                "\"Back\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "firstTime",
+                "True"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Z-Order the cards following the stock stack.\nThe cards were shuffled before the animation start."
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "Card",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "Card",
+                    "=",
+                    "Stock.ObjectStack::HeightOf(Card)"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Make the cards that will be in the diagonal face up."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ObjectStack::ContainsBetween"
+                  },
+                  "parameters": [
+                    "",
+                    "Stock",
+                    "ObjectStack",
+                    "Card",
+                    "Stock.ObjectStack::Height() - 28",
+                    "Stock.ObjectStack::Height() - 22",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
+                  },
+                  "parameters": [
+                    "Card",
+                    "Animation",
+                    "=",
+                    "Card.PlayingCard::Id()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "FlippableCapability::FlippableBehavior::FlipX"
+                  },
+                  "parameters": [
+                    "Card",
+                    "Flippable",
+                    "no"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "VarSceneTxt"
+              },
+              "parameters": [
+                "AnimationState",
+                "=",
+                "\"SetupTableaux\""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "SceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "firstTime",
+                        "True"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Timer"
+                      },
+                      "parameters": [
+                        "",
+                        "0.2",
+                        "\"NextCard\""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"NextCard\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetSceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "firstTime",
+                    "False"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "yIndex",
+                    "=",
+                    "6 - Variable(firstTableauIndex)"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Z-Order cards sent in the previous iterations according to tableaux.\nBecause the cards were on top of the stock, but they will under the following one in the tableaux."
+                },
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "Tableau",
+                  "conditions": [],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "ObjectStack::Contains"
+                          },
+                          "parameters": [
+                            "",
+                            "Tableau",
+                            "ObjectStack",
+                            "Card",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::ForEach",
+                          "object": "Card",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ChangePlan"
+                              },
+                              "parameters": [
+                                "Card",
+                                "=",
+                                "Tableau.ObjectStack::HeightOf(Card)"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Cards are placed diagonal by diagonal."
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Repeat",
+                  "repeatExpression": "7 - Variable(firstTableauIndex)",
+                  "conditions": [],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "Tableau",
+                            "Index",
+                            "=",
+                            "Variable(firstTableauIndex) + Variable(yIndex)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ObjectStack::HasOnTop"
+                          },
+                          "parameters": [
+                            "",
+                            "Stock",
+                            "ObjectStack",
+                            "Card",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+                          },
+                          "parameters": [
+                            "Card",
+                            "Tween",
+                            "\"BackToStock\"",
+                            "Tableau.X()",
+                            "Tableau.Y() + Variable(yIndex) * 16",
+                            "\"easeOutQuad\"",
+                            "1 + 0.125 * Tableau.Variable(Index)",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "yIndex",
+                            "-",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ObjectStack::ObjectStack::Remove"
+                          },
+                          "parameters": [
+                            "Stock",
+                            "ObjectStack",
+                            "Card",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ObjectStack::ObjectStack::AddOnTop"
+                          },
+                          "parameters": [
+                            "Tableau",
+                            "ObjectStack",
+                            "Card",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "firstTableauIndex",
+                        "-",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "firstTableauIndex",
+                        "<",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarSceneTxt"
+                      },
+                      "parameters": [
+                        "AnimationState",
+                        "=",
+                        "\"WaitSetupTableauEnd\""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Wait for the last card to reach its destination."
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "VarSceneTxt"
+              },
+              "parameters": [
+                "AnimationState",
+                "=",
+                "\"WaitSetupTableauEnd\""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Timer"
+                  },
+                  "parameters": [
+                    "",
+                    "1.8",
+                    "\"NextCard\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarSceneTxt"
+                  },
+                  "parameters": [
+                    "AnimationState",
+                    "=",
+                    "\"PrePickACard\""
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "name": "Pick a Card",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "VarSceneTxt"
+              },
+              "parameters": [
+                "AnimationState",
+                "=",
+                "\"PrePickACard\""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ObjectStack::HasOnTop"
+                  },
+                  "parameters": [
+                    "",
+                    "Stock",
+                    "ObjectStack",
+                    "Card",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+                  },
+                  "parameters": [
+                    "Card",
+                    "Tween",
+                    "\"PickACard\"",
+                    "Deck.X()",
+                    "Deck.Y()",
+                    "\"easeInOutQuad\"",
+                    "0.5",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ThreeDFlip::ThreeDFlip::Flip"
+                  },
+                  "parameters": [
+                    "Card",
+                    "ThreeDFlip",
+                    "200",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ObjectStack::ObjectStack::Remove"
+                  },
+                  "parameters": [
+                    "Stock",
+                    "ObjectStack",
+                    "Card",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ObjectStack::ObjectStack::AddOnTop"
+                  },
+                  "parameters": [
+                    "Deck",
+                    "ObjectStack",
+                    "Card",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarSceneTxt"
+                  },
+                  "parameters": [
+                    "AnimationState",
+                    "=",
+                    "\"PickACard\""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "VarSceneTxt"
+              },
+              "parameters": [
+                "AnimationState",
+                "=",
+                "\"PickACard\""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ObjectStack::HasOnTop"
+                  },
+                  "parameters": [
+                    "",
+                    "Deck",
+                    "ObjectStack",
+                    "Card",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "FlippableCapability::FlippableBehavior::FlippedX"
+                  },
+                  "parameters": [
+                    "Card",
+                    "Flippable"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
+                  },
+                  "parameters": [
+                    "Card",
+                    "Animation",
+                    "=",
+                    "Card.PlayingCard::Id()"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ObjectStack::HasOnTop"
+                  },
+                  "parameters": [
+                    "",
+                    "Deck",
+                    "ObjectStack",
+                    "Card",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::HasFinished"
+                  },
+                  "parameters": [
+                    "Card",
+                    "Tween",
+                    "\"PickACard\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarSceneTxt"
+                  },
+                  "parameters": [
+                    "AnimationState",
+                    "=",
+                    "\"End\""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "VarSceneTxt"
+              },
+              "parameters": [
+                "AnimationState",
+                "=",
+                "\"End\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "FlippableCapability::FlippableBehavior::FlipX"
+              },
+              "parameters": [
+                "Card",
+                "Flippable",
+                "no"
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    }
+  ]
+}

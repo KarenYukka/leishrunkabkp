@@ -1,0 +1,408 @@
+{
+  "associatedLayout": "Klondike",
+  "name": "SetupNoAnimation",
+  "events": [
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Put all the card outside of the screen.\nSo, cards that are still in the stock at the end of the setup can't conflict with user inputs in any way."
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "value": "Cache"
+          },
+          "parameters": [
+            "Card"
+          ]
+        },
+        {
+          "type": {
+            "value": "MettreXY"
+          },
+          "parameters": [
+            "Card",
+            "=",
+            "0",
+            "=",
+            "400"
+          ]
+        },
+        {
+          "type": {
+            "value": "ObjectStack::ObjectStack::Clear"
+          },
+          "parameters": [
+            "CardStack",
+            "ObjectStack",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "ObjectStack::ObjectStack::AddOnTop"
+          },
+          "parameters": [
+            "Stock",
+            "ObjectStack",
+            "Card",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "ObjectStack::ObjectStack::Shuffle"
+          },
+          "parameters": [
+            "Stock",
+            "ObjectStack",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "name": "Setup Tableaux",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Repeat",
+          "repeatExpression": "Count(Tableau)",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "index",
+                "=",
+                "0"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "Tableau",
+                    "Index",
+                    "=",
+                    "Variable(tableauIndex)"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "The tableaux form a triangle like this: 1 card, 2 cards, 3 cards..."
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Repeat",
+                  "repeatExpression": "Variable(tableauIndex) + 1",
+                  "conditions": [],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "ObjectStack::HasOnTop"
+                          },
+                          "parameters": [
+                            "",
+                            "Stock",
+                            "ObjectStack",
+                            "Card",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ObjectStack::ObjectStack::Remove"
+                          },
+                          "parameters": [
+                            "Stock",
+                            "ObjectStack",
+                            "Card",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ObjectStack::ObjectStack::AddOnTop"
+                          },
+                          "parameters": [
+                            "Tableau",
+                            "ObjectStack",
+                            "Card",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "MettreXY"
+                          },
+                          "parameters": [
+                            "Card",
+                            "=",
+                            "Tableau.X()",
+                            "=",
+                            "Tableau.Y() + Variable(index) * 16"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "Card",
+                            "=",
+                            "Variable(index)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "index",
+                            "+",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Montre"
+                          },
+                          "parameters": [
+                            "Card",
+                            ""
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "In a tableau, all cards face down unless..."
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "index",
+                                "<=",
+                                "Variable(tableauIndex)"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                              },
+                              "parameters": [
+                                "Card",
+                                "Animation",
+                                "=",
+                                "\"Back\""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "...they are the last card in the column."
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "index",
+                                ">",
+                                "Variable(tableauIndex)"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ActivateBehavior"
+                              },
+                              "parameters": [
+                                "Card",
+                                "Draggable",
+                                "yes"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "tableauIndex",
+                    "+",
+                    "1"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "name": "Pick a Card",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "ObjectStack::HasOnTop"
+              },
+              "parameters": [
+                "",
+                "Stock",
+                "ObjectStack",
+                "Card",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ObjectStack::ObjectStack::Remove"
+              },
+              "parameters": [
+                "Stock",
+                "ObjectStack",
+                "Card",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ObjectStack::ObjectStack::AddOnTop"
+              },
+              "parameters": [
+                "Deck",
+                "ObjectStack",
+                "Card",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Montre"
+              },
+              "parameters": [
+                "Card",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "Card",
+                "Draggable",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "Card",
+                "=",
+                "Deck.X()",
+                "=",
+                "Deck.Y()"
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    }
+  ]
+}
