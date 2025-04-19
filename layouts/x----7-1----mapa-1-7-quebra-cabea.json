@@ -729,6 +729,7 @@
       "behaviors": [],
       "content": {
         "centerLocation": "ModelOrigin",
+        "crossfadeDuration": 0,
         "depth": 69,
         "height": 69,
         "keepAspectRatio": true,
@@ -751,6 +752,7 @@
       "behaviors": [],
       "content": {
         "centerLocation": "ModelOrigin",
+        "crossfadeDuration": 0,
         "depth": 72,
         "height": 72,
         "keepAspectRatio": true,
@@ -773,6 +775,7 @@
       "behaviors": [],
       "content": {
         "centerLocation": "ModelOrigin",
+        "crossfadeDuration": 0,
         "depth": 69,
         "height": 69,
         "keepAspectRatio": true,
@@ -795,6 +798,7 @@
       "behaviors": [],
       "content": {
         "centerLocation": "ModelOrigin",
+        "crossfadeDuration": 0,
         "depth": 69,
         "height": 69,
         "keepAspectRatio": true,
@@ -817,6 +821,7 @@
       "behaviors": [],
       "content": {
         "centerLocation": "ModelOrigin",
+        "crossfadeDuration": 0,
         "depth": 69,
         "height": 69,
         "keepAspectRatio": true,
@@ -839,6 +844,7 @@
       "behaviors": [],
       "content": {
         "centerLocation": "ModelOrigin",
+        "crossfadeDuration": 0,
         "depth": 69,
         "height": 69,
         "keepAspectRatio": true,
@@ -861,6 +867,7 @@
       "behaviors": [],
       "content": {
         "centerLocation": "ModelOrigin",
+        "crossfadeDuration": 0,
         "depth": 69,
         "height": 69,
         "keepAspectRatio": true,
@@ -883,6 +890,7 @@
       "behaviors": [],
       "content": {
         "centerLocation": "ModelOrigin",
+        "crossfadeDuration": 0,
         "depth": 69,
         "height": 69,
         "keepAspectRatio": true,
@@ -905,6 +913,7 @@
       "behaviors": [],
       "content": {
         "centerLocation": "ModelOrigin",
+        "crossfadeDuration": 0,
         "depth": 69,
         "height": 69,
         "keepAspectRatio": true,
@@ -927,6 +936,7 @@
       "behaviors": [],
       "content": {
         "centerLocation": "ModelOrigin",
+        "crossfadeDuration": 0,
         "depth": 69,
         "height": 69,
         "keepAspectRatio": true,
@@ -949,6 +959,7 @@
       "behaviors": [],
       "content": {
         "centerLocation": "ModelOrigin",
+        "crossfadeDuration": 0,
         "depth": 69,
         "height": 69,
         "keepAspectRatio": true,
@@ -971,6 +982,7 @@
       "behaviors": [],
       "content": {
         "centerLocation": "ModelOrigin",
+        "crossfadeDuration": 0,
         "depth": 69,
         "height": 69,
         "keepAspectRatio": true,
@@ -993,6 +1005,7 @@
       "behaviors": [],
       "content": {
         "centerLocation": "ModelOrigin",
+        "crossfadeDuration": 0,
         "depth": 69,
         "height": 69,
         "keepAspectRatio": true,
@@ -1015,6 +1028,7 @@
       "behaviors": [],
       "content": {
         "centerLocation": "ModelOrigin",
+        "crossfadeDuration": 0,
         "depth": 69,
         "height": 69,
         "keepAspectRatio": true,
@@ -1192,6 +1206,7 @@
       "behaviors": [],
       "content": {
         "centerLocation": "ModelOrigin",
+        "crossfadeDuration": 0,
         "depth": 249,
         "height": 249,
         "keepAspectRatio": true,
@@ -1214,6 +1229,7 @@
       "behaviors": [],
       "content": {
         "centerLocation": "ModelOrigin",
+        "crossfadeDuration": 0,
         "depth": 69,
         "height": 69,
         "keepAspectRatio": true,

@@ -4526,6 +4526,7 @@
       "behaviors": [],
       "content": {
         "centerLocation": "ModelOrigin",
+        "crossfadeDuration": 0,
         "depth": 154,
         "height": 154,
         "keepAspectRatio": true,
@@ -4548,6 +4549,7 @@
       "behaviors": [],
       "content": {
         "centerLocation": "ModelOrigin",
+        "crossfadeDuration": 0,
         "depth": 210,
         "height": 210,
         "keepAspectRatio": true,
@@ -4570,6 +4572,7 @@
       "behaviors": [],
       "content": {
         "centerLocation": "ModelOrigin",
+        "crossfadeDuration": 0,
         "depth": 174,
         "height": 174,
         "keepAspectRatio": true,
@@ -4592,6 +4595,7 @@
       "behaviors": [],
       "content": {
         "centerLocation": "ModelOrigin",
+        "crossfadeDuration": 0,
         "depth": 150,
         "height": 150,
         "keepAspectRatio": true,
@@ -4614,6 +4618,7 @@
       "behaviors": [],
       "content": {
         "centerLocation": "ModelOrigin",
+        "crossfadeDuration": 0,
         "depth": 176,
         "height": 176,
         "keepAspectRatio": true,
@@ -4636,6 +4641,7 @@
       "behaviors": [],
       "content": {
         "centerLocation": "ModelOrigin",
+        "crossfadeDuration": 0,
         "depth": 176,
         "height": 176,
         "keepAspectRatio": true,
@@ -4658,6 +4664,7 @@
       "behaviors": [],
       "content": {
         "centerLocation": "ModelOrigin",
+        "crossfadeDuration": 0,
         "depth": 150,
         "height": 150,
         "keepAspectRatio": true,
@@ -4680,6 +4687,7 @@
       "behaviors": [],
       "content": {
         "centerLocation": "ModelOrigin",
+        "crossfadeDuration": 0,
         "depth": 223,
         "height": 223,
         "keepAspectRatio": true,
@@ -4702,6 +4710,7 @@
       "behaviors": [],
       "content": {
         "centerLocation": "ModelOrigin",
+        "crossfadeDuration": 0,
         "depth": 10,
         "height": 10,
         "keepAspectRatio": true,

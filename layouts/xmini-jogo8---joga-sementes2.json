@@ -950,6 +950,7 @@
       "behaviors": [],
       "content": {
         "centerLocation": "ModelOrigin",
+        "crossfadeDuration": 0,
         "depth": 75,
         "height": 75,
         "keepAspectRatio": true,
@@ -972,6 +973,7 @@
       "behaviors": [],
       "content": {
         "centerLocation": "ModelOrigin",
+        "crossfadeDuration": 0,
         "depth": 242,
         "height": 242,
         "keepAspectRatio": true,
@@ -994,6 +996,7 @@
       "behaviors": [],
       "content": {
         "centerLocation": "ModelOrigin",
+        "crossfadeDuration": 0,
         "depth": 320,
         "height": 320,
         "keepAspectRatio": true,
@@ -1024,6 +1027,7 @@
       ],
       "content": {
         "centerLocation": "ModelOrigin",
+        "crossfadeDuration": 0,
         "depth": 75,
         "height": 75,
         "keepAspectRatio": true,
@@ -1256,6 +1260,7 @@
       "behaviors": [],
       "content": {
         "centerLocation": "ObjectCenter",
+        "crossfadeDuration": 0,
         "depth": 99,
         "height": 99,
         "keepAspectRatio": true,

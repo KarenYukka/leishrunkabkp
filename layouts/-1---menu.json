@@ -311,6 +311,7 @@
       "behaviors": [],
       "content": {
         "centerLocation": "ModelOrigin",
+        "crossfadeDuration": 0,
         "depth": 48,
         "height": 48,
         "keepAspectRatio": true,

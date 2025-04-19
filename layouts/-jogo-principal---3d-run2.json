@@ -1261,6 +1261,7 @@
       "behaviors": [],
       "content": {
         "centerLocation": "ObjectCenter",
+        "crossfadeDuration": 0,
         "depth": 99,
         "height": 99,
         "keepAspectRatio": true,
@@ -1290,6 +1291,7 @@
       "behaviors": [],
       "content": {
         "centerLocation": "ModelOrigin",
+        "crossfadeDuration": 0,
         "depth": 31,
         "height": 31,
         "keepAspectRatio": true,
@@ -1462,6 +1464,7 @@
       ],
       "content": {
         "centerLocation": "ModelOrigin",
+        "crossfadeDuration": 0,
         "depth": 129,
         "height": 129,
         "keepAspectRatio": true,
@@ -1537,6 +1540,7 @@
       ],
       "content": {
         "centerLocation": "ModelOrigin",
+        "crossfadeDuration": 0,
         "depth": 31,
         "height": 31,
         "keepAspectRatio": true,
@@ -1616,6 +1620,7 @@
       ],
       "content": {
         "centerLocation": "ObjectCenter",
+        "crossfadeDuration": 0,
         "depth": 118,
         "height": 118,
         "keepAspectRatio": true,
@@ -1699,6 +1704,7 @@
       "behaviors": [],
       "content": {
         "centerLocation": "ObjectCenter",
+        "crossfadeDuration": 0,
         "depth": 384,
         "height": 384,
         "keepAspectRatio": true,
@@ -1721,6 +1727,7 @@
       "behaviors": [],
       "content": {
         "centerLocation": "ModelOrigin",
+        "crossfadeDuration": 0,
         "depth": 50,
         "height": 50,
         "keepAspectRatio": true,
@@ -1743,6 +1750,7 @@
       "behaviors": [],
       "content": {
         "centerLocation": "ModelOrigin",
+        "crossfadeDuration": 0,
         "depth": 28,
         "height": 28,
         "keepAspectRatio": true,
@@ -1857,6 +1865,7 @@
       ],
       "content": {
         "centerLocation": "ModelOrigin",
+        "crossfadeDuration": 0,
         "depth": 100,
         "height": 100,
         "keepAspectRatio": true,
@@ -1980,6 +1989,7 @@
       "behaviors": [],
       "content": {
         "centerLocation": "ModelOrigin",
+        "crossfadeDuration": 0,
         "depth": 322,
         "height": 322,
         "keepAspectRatio": true,
@@ -2002,6 +2012,7 @@
       "behaviors": [],
       "content": {
         "centerLocation": "ModelOrigin",
+        "crossfadeDuration": 0,
         "depth": 129,
         "height": 129,
         "keepAspectRatio": true,

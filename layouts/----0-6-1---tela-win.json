@@ -328,6 +328,7 @@
       ],
       "content": {
         "centerLocation": "ModelOrigin",
+        "crossfadeDuration": 0,
         "depth": 64,
         "height": 64,
         "keepAspectRatio": true,
