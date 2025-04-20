@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.34722058172838416,
+    "zoomFactor": 0.5322706813796921,
     "windowMask": false
   },
   "objectsGroups": [],
@@ -128,23 +128,6 @@
     },
     {
       "angle": 0,
-      "customSize": true,
-      "depth": 1,
-      "height": 53,
-      "keepRatio": true,
-      "layer": "",
-      "name": "Help",
-      "persistentUuid": "b9fd710d-ef8d-4e82-b994-9fb3760de397",
-      "width": 55,
-      "x": 1215,
-      "y": 9,
-      "zOrder": 12,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
       "customSize": false,
       "height": 0,
       "keepRatio": true,
@@ -163,15 +146,80 @@
       "angle": 0,
       "customSize": true,
       "depth": 1,
-      "height": 102,
+      "height": 95,
       "keepRatio": true,
       "layer": "",
       "name": "btn_Next",
       "persistentUuid": "0d8c14e4-92ed-496b-b89f-be6c0aa2495c",
-      "width": 93,
-      "x": 1154,
-      "y": 598,
+      "width": 87,
+      "x": 1151,
+      "y": 623,
       "zOrder": 14,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "Layer texto",
+      "name": "Text_1",
+      "persistentUuid": "9debefdd-698b-4e80-aa75-809362fef2d1",
+      "width": 0,
+      "x": 173,
+      "y": 664,
+      "zOrder": 16,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 83,
+      "keepRatio": true,
+      "layer": "Layer texto",
+      "name": "Text_3",
+      "persistentUuid": "75bea7c7-7362-4e35-9c8c-eeecd2cfb0ea",
+      "width": 843,
+      "x": 176,
+      "y": 665,
+      "zOrder": 17,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "Layer texto",
+      "name": "Text_2",
+      "persistentUuid": "0f79f1fb-fd59-44bd-b940-98cf7bcc69aa",
+      "width": 0,
+      "x": 125,
+      "y": 663,
+      "zOrder": 18,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "Layer texto",
+      "name": "Text_4",
+      "persistentUuid": "d40217a9-ad93-459e-83d1-6ec2f3f7a7f9",
+      "width": 0,
+      "x": 122,
+      "y": 664,
+      "zOrder": 19,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -1839,6 +1887,138 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "",
+      "name": "Text_1",
+      "type": "BBText::BBText",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "text": "Na floresta os animais vivem em equilíbrio!",
+        "opacity": 255,
+        "fontSize": 25,
+        "visible": true,
+        "color": "0;0;0",
+        "fontFamily": "Arial",
+        "align": "left",
+        "verticalTextAlignment": "top"
+      }
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Card",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Janela 1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 723,
+                        "y": 432
+                      },
+                      {
+                        "x": 2301,
+                        "y": 432
+                      },
+                      {
+                        "x": 2301,
+                        "y": 1566
+                      },
+                      {
+                        "x": 723,
+                        "y": 1566
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "name": "Text_2",
+      "type": "BBText::BBText",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "text": "Mas com a chegada da urbanização e o desmatamento o ambiente mudou...",
+        "opacity": 255,
+        "fontSize": 25,
+        "visible": true,
+        "color": "0;0;0",
+        "fontFamily": "Arial",
+        "align": "left",
+        "verticalTextAlignment": "top"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "name": "Text_3",
+      "type": "BBText::BBText",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "text": "Os mosquitos se proliferaram!",
+        "opacity": 255,
+        "fontSize": 25,
+        "visible": true,
+        "color": "0;0;0",
+        "fontFamily": "Arial",
+        "align": "left",
+        "verticalTextAlignment": "top"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "name": "Text_4",
+      "type": "BBText::BBText",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "text": "E agora seguem em direção da cidade lar do nosso cãozinho...!!!",
+        "opacity": 255,
+        "fontSize": 25,
+        "visible": true,
+        "color": "0;0;0",
+        "fontFamily": "Arial",
+        "align": "left",
+        "verticalTextAlignment": "top"
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -1905,12 +2085,201 @@
         "children": [
           {
             "objectName": "Text_explicação"
+          },
+          {
+            "objectName": "Text_1"
+          },
+          {
+            "objectName": "Text_2"
+          },
+          {
+            "objectName": "Text_3"
+          },
+          {
+            "objectName": "Text_4"
           }
         ]
+      },
+      {
+        "objectName": "Card"
       }
     ]
   },
   "events": [
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "DepartScene"
+          },
+          "parameters": [
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Cache"
+          },
+          "parameters": [
+            "Text_2"
+          ]
+        },
+        {
+          "type": {
+            "value": "Cache"
+          },
+          "parameters": [
+            "Text_3"
+          ]
+        },
+        {
+          "type": {
+            "value": "Cache"
+          },
+          "parameters": [
+            "Text_4"
+          ]
+        },
+        {
+          "type": {
+            "value": "Delete"
+          },
+          "parameters": [
+            "btn_Next",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "colorB": 254,
+      "colorG": 19,
+      "colorR": 144,
+      "creationTime": 0,
+      "name": "TEXTOS",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "2"
+              ]
+            },
+            {
+              "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "Text_1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Montre"
+              },
+              "parameters": [
+                "Text_2",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "5"
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Text_2",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Montre"
+              },
+              "parameters": [
+                "Text_3",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "3"
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Text_3",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Montre"
+              },
+              "parameters": [
+                "Text_4",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "15"
+              ]
+            },
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "btn_Next",
+                "1151",
+                "623",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ResizableCapability::ResizableBehavior::SetSize"
+              },
+              "parameters": [
+                "btn_Next",
+                "Resizable",
+                "87\n",
+                "95\n"
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
     {
       "colorB": 254,
       "colorG": 19,
@@ -1925,7 +2294,6 @@
           "colorG": 19,
           "colorR": 144,
           "creationTime": 0,
-          "folded": true,
           "name": "Layer Help",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -2146,19 +2514,9 @@
             }
           ],
           "parameters": []
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
         }
       ],
       "parameters": []
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": []
     }
   ],
   "layers": [
@@ -2172,7 +2530,7 @@
       "cameraType": "perspective",
       "followBaseLayerCamera": false,
       "isLightingLayer": false,
-      "isLocked": false,
+      "isLocked": true,
       "name": "",
       "renderingType": "",
       "visibility": true,
@@ -2220,6 +2578,39 @@
       "name": "Layer help",
       "renderingType": "",
       "visibility": false,
+      "cameras": [],
+      "effects": [
+        {
+          "effectType": "Scene3D::HemisphereLight",
+          "name": "3D Light",
+          "doubleParameters": {
+            "elevation": 45,
+            "intensity": 1,
+            "rotation": 0
+          },
+          "stringParameters": {
+            "groundColor": "64;64;64",
+            "skyColor": "255;255;255",
+            "top": "Y-"
+          },
+          "booleanParameters": {}
+        }
+      ]
+    },
+    {
+      "ambientLightColorB": 200,
+      "ambientLightColorG": 200,
+      "ambientLightColorR": 200,
+      "camera3DFarPlaneDistance": 10000,
+      "camera3DFieldOfView": 45,
+      "camera3DNearPlaneDistance": 3,
+      "cameraType": "",
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "isLocked": false,
+      "name": "Layer texto",
+      "renderingType": "",
+      "visibility": true,
       "cameras": [],
       "effects": [
         {

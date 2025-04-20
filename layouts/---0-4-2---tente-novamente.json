@@ -93,23 +93,6 @@
     {
       "angle": 0,
       "customSize": true,
-      "depth": 1,
-      "height": 802,
-      "keepRatio": true,
-      "layer": "Background",
-      "name": "Brick4",
-      "persistentUuid": "f047a760-2663-4add-b77f-f987c56678c0",
-      "width": 1434,
-      "x": -69,
-      "y": -29,
-      "zOrder": 12,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
       "depth": 48,
       "height": 835,
       "keepRatio": true,
@@ -117,8 +100,8 @@
       "name": "TransparentButton",
       "persistentUuid": "b7ffe91d-fde9-4a40-acb5-f86c0fa83cb6",
       "width": 1467,
-      "x": -109,
-      "y": -49,
+      "x": -71,
+      "y": -73,
       "zOrder": 13,
       "numberProperties": [],
       "stringProperties": [],
@@ -136,6 +119,23 @@
       "x": -1,
       "y": -32,
       "zOrder": 7,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 857,
+      "keepRatio": true,
+      "layer": "Background",
+      "name": "Sea",
+      "persistentUuid": "6795a781-1af1-4b8b-ae47-802b117b9e5d",
+      "width": 1511,
+      "x": -84,
+      "y": -63,
+      "zOrder": 14,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -554,6 +554,17 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "3ee3a793953b7172157fb8fe898fc26a387689feb50ed02be93a48b411fd0cd6",
+      "height": 128,
+      "name": "Sea",
+      "texture": "Fundo_pacman.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 128,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
     }
   ],
   "objectsFolderStructure": {
@@ -562,6 +573,9 @@
       {
         "folderName": "Backgrond",
         "children": [
+          {
+            "objectName": "Sea"
+          },
           {
             "objectName": "Brick4"
           },
@@ -826,7 +840,7 @@
       "cameraType": "perspective",
       "followBaseLayerCamera": false,
       "isLightingLayer": false,
-      "isLocked": false,
+      "isLocked": true,
       "name": "",
       "renderingType": "",
       "visibility": true,

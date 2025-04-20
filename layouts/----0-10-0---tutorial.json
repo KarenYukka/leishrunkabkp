@@ -18,7 +18,7 @@
     "gridColor": 16777215,
     "gridAlpha": 0.21,
     "snap": true,
-    "zoomFactor": 0.6033839564610552,
+    "zoomFactor": 0.37927214880895993,
     "windowMask": false
   },
   "objectsGroups": [
@@ -105,6 +105,23 @@
       "x": 592,
       "y": 416,
       "zOrder": 43,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 832,
+      "keepRatio": true,
+      "layer": "Background",
+      "name": "Brick3",
+      "persistentUuid": "fb72f40c-a5ba-4f24-96c2-445b4adc59c1",
+      "width": 1424,
+      "x": -80,
+      "y": -16,
+      "zOrder": 44,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -439,6 +456,17 @@
           "width": 192
         }
       }
+    },
+    {
+      "assetStoreId": "fad388d5b03fd85459567c968deb7d39df2ab923240826b6e823e7dc09c2e760",
+      "height": 512,
+      "name": "Brick3",
+      "texture": "Fundo.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 512,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
     }
   ],
   "objectsFolderStructure": {
@@ -460,6 +488,9 @@
         "children": [
           {
             "objectName": "Sea"
+          },
+          {
+            "objectName": "Brick3"
           },
           {
             "objectName": "Card"
@@ -526,7 +557,7 @@
                   },
                   "parameters": [
                     "",
-                    "\"0.10 💬 - PALAVRAS CRUZADAS\"",
+                    "\"0.10 💬 - PALAVRAS CRUZADAS - novo\"",
                     ""
                   ]
                 }
